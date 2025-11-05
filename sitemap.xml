@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Homepage - Primary entry point -->
+  <url>
+    <loc>https://www.parchanas.com/</loc>
+    <priority>1.0</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <!-- Trust & Safety - Critical conversion page (The 'Nosotros' Reimagined) -->
+  <url>
+    <loc>https://www.parchanas.com/trust-and-safety</loc>
+    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- Programs Hub - Main program overview -->
+  <url>
+    <loc>https://www.parchanas.com/programs</loc>
+    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- Individual Program Pages - Age-specific camps -->
+  <url>
+    <loc>https://www.parchanas.com/programs/pathfinders</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.parchanas.com/programs/trailblazers</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.parchanas.com/programs/voyagers</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- A Day in the Life - Experience storytelling -->
+  <url>
+    <loc>https://www.parchanas.com/a-day-in-the-life</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- Dates & Rates - Critical logistics page -->
+  <url>
+    <loc>https://www.parchanas.com/dates-and-rates</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <!-- Parent FAQ - Objection handler -->
+  <url>
+    <loc>https://www.parchanas.com/parent-faq</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- Contact - General inquiry page -->
+  <url>
+    <loc>https://www.parchanas.com/contact</loc>
+    <priority>0.7</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+
+  <!-- Register - Primary conversion page -->
+  <url>
+    <loc>https://www.parchanas.com/register</loc>
+    <priority>1.0</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+</urlset>

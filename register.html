@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Inscribe a tu hijo en Camp Parchanas. Proceso de registro simple y seguro.">
+    <title>Inscripción - Camp Parchanas</title>
+    <link rel="stylesheet" href="css/output.css">
+</head>
+<body>
+    <header class="header-sticky">
+        <nav class="container-custom px-4 py-4 flex items-center justify-between">
+            <a href="index.html" class="flex items-center">
+                <div class="w-12 h-12 bg-primary-900 rounded-lg flex items-center justify-center">
+                    <span class="text-accent-900 font-bold text-2xl">P</span>
+                </div>
+                <span class="ml-3 font-sans font-bold text-2xl text-primary-900">PARCHANAS</span>
+            </a>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="trust-and-safety.html" class="font-sans font-semibold text-primary-900 hover:text-accent-900">Confianza & Seguridad</a>
+                <a href="programs.html" class="font-sans font-semibold text-primary-900 hover:text-accent-900">Programas</a>
+                <a href="dates-and-rates.html" class="font-sans font-semibold text-primary-900 hover:text-accent-900">Fechas & Tarifas</a>
+                <a href="parent-faq.html" class="font-sans font-semibold text-primary-900 hover:text-accent-900">Preguntas</a>
+            </div>
+            <button id="mobile-menu-toggle" class="md:hidden p-2 text-primary-900">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="mobile-menu-closed md:hidden bg-neutral-light transition-all duration-300">
+            <div class="container-custom px-4 py-4 flex flex-col gap-4">
+                <a href="trust-and-safety.html" class="font-sans font-semibold text-primary-900 py-2">Confianza & Seguridad</a>
+                <a href="programs.html" class="font-sans font-semibold text-primary-900 py-2">Programas</a>
+                <a href="dates-and-rates.html" class="font-sans font-semibold text-primary-900 py-2">Fechas & Tarifas</a>
+                <a href="parent-faq.html" class="font-sans font-semibold text-primary-900 py-2">Preguntas</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="section-gray py-12">
+        <div class="container-custom px-4">
+            <div class="max-w-4xl mx-auto">
+                <!-- Progress Stepper -->
+                <div class="mb-8">
+                    <div class="flex items-center justify-between mb-4">
+                        <div id="step-indicator-1" class="flex flex-col items-center flex-1">
+                            <div class="w-12 h-12 rounded-full bg-accent-900 text-neutral-black flex items-center justify-center font-bold text-xl mb-2 transition-all">1</div>
+                            <span class="text-sm font-sans font-semibold text-center">Información de Padres</span>
+                        </div>
+                        <div class="flex-1 h-1 bg-neutral-light mx-2"></div>
+                        <div id="step-indicator-2" class="flex flex-col items-center flex-1">
+                            <div class="w-12 h-12 rounded-full bg-neutral-light text-neutral-gray flex items-center justify-center font-bold text-xl mb-2 transition-all">2</div>
+                            <span class="text-sm font-sans font-semibold text-center">Información del Campista</span>
+                        </div>
+                        <div class="flex-1 h-1 bg-neutral-light mx-2"></div>
+                        <div id="step-indicator-3" class="flex flex-col items-center flex-1">
+                            <div class="w-12 h-12 rounded-full bg-neutral-light text-neutral-gray flex items-center justify-center font-bold text-xl mb-2 transition-all">3</div>
+                            <span class="text-sm font-sans font-semibold text-center">Médico & Dieta</span>
+                        </div>
+                        <div class="flex-1 h-1 bg-neutral-light mx-2"></div>
+                        <div id="step-indicator-4" class="flex flex-col items-center flex-1">
+                            <div class="w-12 h-12 rounded-full bg-neutral-light text-neutral-gray flex items-center justify-center font-bold text-xl mb-2 transition-all">4</div>
+                            <span class="text-sm font-sans font-semibold text-center">Selección de Sesión</span>
+                        </div>
+                        <div class="flex-1 h-1 bg-neutral-light mx-2"></div>
+                        <div id="step-indicator-5" class="flex flex-col items-center flex-1">
+                            <div class="w-12 h-12 rounded-full bg-neutral-light text-neutral-gray flex items-center justify-center font-bold text-xl mb-2 transition-all">5</div>
+                            <span class="text-sm font-sans font-semibold text-center">Pago</span>
+                        </div>
+                    </div>
+                    <div class="w-full bg-neutral-light rounded-full h-2">
+                        <div id="progress-bar" class="bg-accent-900 h-2 rounded-full transition-all duration-300" style="width: 20%"></div>
+                    </div>
+                </div>
+
+                <!-- Form Container -->
+                <div class="card">
+                    <form id="registration-form">
+
+                        <!-- Step 1: Parent Information -->
+                        <div id="step-1" class="form-step">
+                            <h2 class="text-3xl font-sans font-bold text-primary-900 mb-6">Paso 1: Información de Padres</h2>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                                <div>
+                                    <label for="parent-first-name" class="block font-sans font-semibold text-primary-900 mb-2">Nombre *</label>
+                                    <input type="text" id="parent-first-name" required class="w-full px-4 py-3 border-2 border-neutral-light rounded-lg focus:border-accent-900 focus:outline-none">
+                                </div>
+                                <div>
+                                    <label for="parent-last-name" class="block font-sans font-semibold text-primary-900 mb-2">Apellido *</label>
+                                    <input type="text" id="parent-last-name" required class="w-full px-4 py-3 border-2 border-neutral-light rounded-lg focus:border-accent-900 focus:outline-none">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                                <div>
+                                    <label for="parent-email" class="block font-sans font-semibold text-primary-900 mb-2">Email *</label>
+                                    <input type="email" id="parent-email" required class="w-full px-4 py-3 border-2 border-neutral-light rounded-lg focus:border-accent-900 focus:outline-none">
+                                    <p class="text-sm text-neutral-gray mt-1">Se enviará confirmación a este email</p>
+                                </div>
+                                <div>
+                                    <label for="parent-phone" class="block font-sans font-semibold text-primary-900 mb-2">Teléfono *</label>
+                                    <input type="tel" id="parent-phone" required placeholder="+54 9 11 1234-5678" class="w-full px-4 py-3 border-2 border-neutral-light rounded-lg focus:border-accent-900 focus:outline-none">
+                                </div>
+                            </div>
+
+                            <div class="mb-6">
+                                <label for="parent-address" class="block font-sans font-semibold text-primary-900 mb-2">Dirección *</label>
+                                <input type="text" id="parent-address" required class="w-full px-4 py-3 border-2 border-neutral-light rounded-lg focus:border-accent-900 focus:outline-none">
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                <div>
+                                    <label for="parent-city" class="block font-sans font-semibold text-primary-900 mb-2">Ciudad *</label>
+                                    <input type="text" id="parent-city" required class="w-full px-4 py-3 border-2 border-neutral-light rounded-lg focus:border-accent-900 focus:outline-none">
+                                </div>
+                                <div>
+                                    <label for="parent-state" class="block font-sans font-semibold text-primary-900 mb-2">Provincia *</label>
+                                    <input type="text" id="parent-state" required class="w-full px-4 py-3 border-2 border-neutral-light rounded-lg focus:border-accent-900 focus:outline-none">
+                                </div>
+                                <div>
+                                    <label for="parent-zip" class="block font-sans font-semibold text-primary-900 mb-2">Código Postal *</label>
+                                    <input type="text" id="parent-zip" required class="w-full px-4 py-3 border-2 border-neutral-light rounded-lg focus:border-accent-900 focus:outline-none">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Camper Information -->
+                        <div id="step-2" class="form-step hidden">
+                            <h2 class="text-3xl font-sans font-bold text-primary-900 mb-6">Paso 2: Información del Campista</h2>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                                <div>
+                                    <label for="camper-first-name" class="block font-sans font-semibold text-primary-900 mb-2">Nombre del Niño/a *</label>
+                                    <input type="text" id="camper-first-name" required class="w-full px-4 py-3 border-2 border-neutral-light rounded-lg focus:border-accent-900 focus:outline-none">
+                                </div>
+                                <div>
+                                    <label for="camper-last-name" class="block font-sans font-semibold text-primary-900 mb-2">Apellido *</label>
+                                    <input type="text" id="camper-last-name" required class="w-full px-4 py-3 border-2 border-neutral-light rounded-lg focus:border-accent-900 focus:outline-none">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                                <div>
+                                    <label for="camper-birthdate" class="block font-sans font-semibold text-primary-900 mb-2">Fecha de Nacimiento *</label>
+                                    <input type="date" id="camper-birthdate" required class="w-full px-4 py-3 border-2 border-neutral-light rounded-lg focus:border-accent-900 focus:outline-none">
+                                </div>
+                                <div>
+                                    <label for="camper-age" class="block font-sans font-semibold text-primary-900 mb-2">Edad *</label>
+                                    <input type="number" id="camper-age" required min="7" max="15" class="w-full px-4 py-3 border-2 border-neutral-light rounded-lg focus:border-accent-900 focus:outline-none">
+                                </div>
+                                <div>
+                                    <label for="camper-gender" class="block font-sans font-semibold text-primary-900 mb-2">Género *</label>
+                                    <select id="camper-gender" required class="w-full px-4 py-3 border-2 border-neutral-light rounded-lg focus:border-accent-900 focus:outline-none">
+                                        <option value="">Seleccionar</option>
+                                        <option value="male">Masculino</option>
+                                        <option value="female">Femenino</option>
+                                        <option value="other">Otro</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="mb-6">
+                                <label for="camper-tshirt" class="block font-sans font-semibold text-primary-900 mb-2">Talla de Camiseta *</label>
+                                <select id="camper-tshirt" required class="w-full px-4 py-3 border-2 border-neutral-light rounded-lg focus:border-accent-900 focus:outline-none">
+                                    <option value="">Seleccionar</option>
+                                    <option value="xs">XS (Niño)</option>
+                                    <option value="s">S (Niño)</option>
+                                    <option value="m">M (Niño)</option>
+                                    <option value="l">L (Niño)</option>
+                                    <option value="xl">XL (Niño)</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-6">
+                                <label for="camper-experience" class="block font-sans font-semibold text-primary-900 mb-2">¿Ha asistido a campamentos antes? *</label>
+                                <select id="camper-experience" required class="w-full px-4 py-3 border-2 border-neutral-light rounded-lg focus:border-accent-900 focus:outline-none">
+                                    <option value="">Seleccionar</option>
+                                    <option value="first-time">Primera vez</option>
+                                    <option value="returning-parchanas">Regresa a Parchanas</option>
+                                    <option value="other-camp">Asistió a otro campamento</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Medical & Dietary -->
+                        <div id="step-3" class="form-step hidden">
+                            <h2 class="text-3xl font-sans font-bold text-primary-900 mb-6">Paso 3: Información Médica & Dietética</h2>
+
+                            <div class="mb-6">
+                                <label for="medical-allergies" class="block font-sans font-semibold text-primary-900 mb-2">Alergias (Alimentarias, Medicamentos, Ambientales) *</label>
+                                <textarea id="medical-allergies" rows="3" placeholder="Ej: Alergia a los cacahuates, alergia al polen..." class="w-full px-4 py-3 border-2 border-neutral-light rounded-lg focus:border-accent-900 focus:outline-none"></textarea>
+                                <p class="text-sm text-neutral-gray mt-1">Escribe "Ninguna" si no tiene alergias</p>
+                            </div>
+
+                            <div class="mb-6">
+                                <label for="medical-conditions" class="block font-sans font-semibold text-primary-900 mb-2">Condiciones Médicas Existentes *</label>
+                                <textarea id="medical-conditions" rows="3" placeholder="Ej: Asma, diabetes..." class="w-full px-4 py-3 border-2 border-neutral-light rounded-lg focus:border-accent-900 focus:outline-none"></textarea>
+                                <p class="text-sm text-neutral-gray mt-1">Escribe "Ninguna" si no tiene condiciones médicas</p>
+                            </div>
+
+                            <div class="mb-6">
+                                <label for="medical-medications" class="block font-sans font-semibold text-primary-900 mb-2">Medicamentos Actuales *</label>
+                                <textarea id="medical-medications" rows="3" placeholder="Nombre del medicamento, dosis y frecuencia..." class="w-full px-4 py-3 border-2 border-neutral-light rounded-lg focus:border-accent-900 focus:outline-none"></textarea>
+                                <p class="text-sm text-neutral-gray mt-1">Escribe "Ninguno" si no toma medicamentos</p>
+                            </div>
+
+                            <div class="mb-6">
+                                <label for="dietary-restrictions" class="block font-sans font-semibold text-primary-900 mb-2">Restricciones Dietéticas *</label>
+                                <select id="dietary-restrictions" class="w-full px-4 py-3 border-2 border-neutral-light rounded-lg focus:border-accent-900 focus:outline-none mb-2">
+                                    <option value="none">Ninguna</option>
+                                    <option value="vegetarian">Vegetariano</option>
+                                    <option value="vegan">Vegano</option>
+                                    <option value="celiac">Celíaco (Sin gluten)</option>
+                                    <option value="kosher">Kosher</option>
+                                    <option value="other">Otra</option>
+                                </select>
+                                <input type="text" id="dietary-other" placeholder="Si seleccionaste 'Otra', especifica aquí..." class="w-full px-4 py-3 border-2 border-neutral-light rounded-lg focus:border-accent-900 focus:outline-none hidden">
+                            </div>
+
+                            <div class="mb-6">
+                                <label for="emergency-contact" class="block font-sans font-semibold text-primary-900 mb-2">Contacto de Emergencia (Nombre & Teléfono) *</label>
+                                <input type="text" id="emergency-contact" required placeholder="Ej: Abuelo Juan - +54 9 11 9876-5432" class="w-full px-4 py-3 border-2 border-neutral-light rounded-lg focus:border-accent-900 focus:outline-none">
+                            </div>
+                        </div>
+
+                        <!-- Step 4: Session Selection -->
+                        <div id="step-4" class="form-step hidden">
+                            <h2 class="text-3xl font-sans font-bold text-primary-900 mb-6">Paso 4: Selecciona tu Sesión</h2>
+
+                            <div class="space-y-4">
+                                <label class="block">
+                                    <input type="radio" name="session" value="session-1" required class="mr-3">
+                                    <span class="font-sans font-bold text-primary-900">Sesión 1:</span> 15 Dic - 27 Dic (2 semanas) - <span class="font-bold text-accent-900">$450.000</span>
+                                </label>
+                                <label class="block">
+                                    <input type="radio" name="session" value="session-2" required class="mr-3">
+                                    <span class="font-sans font-bold text-primary-900">Sesión 2:</span> 2 Ene - 14 Ene (2 semanas) - <span class="font-bold text-accent-900">$450.000</span>
+                                </label>
+                                <label class="block">
+                                    <input type="radio" name="session" value="session-3" required class="mr-3">
+                                    <span class="font-sans font-bold text-primary-900">Sesión 3:</span> 19 Ene - 31 Ene (2 semanas) - <span class="font-bold text-accent-900">$450.000</span>
+                                </label>
+                                <label class="block p-4 bg-accent-50 rounded-lg border-2 border-accent-900">
+                                    <input type="radio" name="session" value="full-summer" required class="mr-3">
+                                    <span class="font-sans font-bold text-primary-900">Sesión Completa ⭐:</span> 15 Dic - 31 Ene (6 semanas) - <span class="font-bold text-secondary-800">$1.200.000</span> <span class="text-sm text-secondary-700">(Ahorra $150k)</span>
+                                </label>
+                            </div>
+
+                            <div class="mt-8 p-4 bg-neutral-light rounded-lg">
+                                <h4 class="font-sans font-bold text-primary-900 mb-2">Descuentos Aplicables:</h4>
+                                <div class="space-y-2">
+                                    <label class="flex items-center">
+                                        <input type="checkbox" id="discount-sibling" class="mr-2">
+                                        <span>Descuento por Hermanos (10% segundo hijo)</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" id="discount-early" class="mr-2">
+                                        <span>Inscripción Anticipada (5% antes del 30 Oct)</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" id="discount-returning" class="mr-2">
+                                        <span>Campista que Regresa (5%)</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 5: Payment -->
+                        <div id="step-5" class="form-step hidden">
+                            <h2 class="text-3xl font-sans font-bold text-primary-900 mb-6">Paso 5: Información de Pago</h2>
+
+                            <div class="mb-6 p-6 bg-accent-50 rounded-lg">
+                                <h3 class="font-sans font-bold text-xl text-primary-900 mb-2">Resumen de Inscripción</h3>
+                                <div class="space-y-2 text-lg">
+                                    <p><strong>Campista:</strong> <span id="summary-camper">-</span></p>
+                                    <p><strong>Sesión:</strong> <span id="summary-session">-</span></p>
+                                    <p><strong>Total:</strong> <span id="summary-total" class="text-2xl font-bold text-accent-900">$450.000</span></p>
+                                </div>
+                            </div>
+
+                            <div class="mb-6">
+                                <label for="payment-method" class="block font-sans font-semibold text-primary-900 mb-2">Método de Pago *</label>
+                                <select id="payment-method" required class="w-full px-4 py-3 border-2 border-neutral-light rounded-lg focus:border-accent-900 focus:outline-none">
+                                    <option value="">Seleccionar</option>
+                                    <option value="full">Pago Completo (100%)</option>
+                                    <option value="deposit">Depósito ($50.000 - Reembolsable)</option>
+                                    <option value="plan">Plan de Pago (50% ahora, 50% antes del 1 Dic)</option>
+                                </select>
+                            </div>
+
+                            <div id="card-details" class="space-y-6">
+                                <div>
+                                    <label for="card-number" class="block font-sans font-semibold text-primary-900 mb-2">Número de Tarjeta *</label>
+                                    <input type="text" id="card-number" placeholder="1234 5678 9012 3456" class="w-full px-4 py-3 border-2 border-neutral-light rounded-lg focus:border-accent-900 focus:outline-none">
+                                </div>
+
+                                <div class="grid grid-cols-2 gap-6">
+                                    <div>
+                                        <label for="card-expiry" class="block font-sans font-semibold text-primary-900 mb-2">Vencimiento *</label>
+                                        <input type="text" id="card-expiry" placeholder="MM/AA" class="w-full px-4 py-3 border-2 border-neutral-light rounded-lg focus:border-accent-900 focus:outline-none">
+                                    </div>
+                                    <div>
+                                        <label for="card-cvv" class="block font-sans font-semibold text-primary-900 mb-2">CVV *</label>
+                                        <input type="text" id="card-cvv" placeholder="123" class="w-full px-4 py-3 border-2 border-neutral-light rounded-lg focus:border-accent-900 focus:outline-none">
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label for="card-name" class="block font-sans font-semibold text-primary-900 mb-2">Nombre en la Tarjeta *</label>
+                                    <input type="text" id="card-name" class="w-full px-4 py-3 border-2 border-neutral-light rounded-lg focus:border-accent-900 focus:outline-none">
+                                </div>
+                            </div>
+
+                            <div class="mt-6">
+                                <label class="flex items-start">
+                                    <input type="checkbox" id="terms-accept" required class="mt-1 mr-3">
+                                    <span class="text-sm text-neutral-dark">Acepto los <a href="#" class="text-primary-700 underline">términos y condiciones</a> y la <a href="#" class="text-primary-700 underline">política de cancelación</a> de Camp Parchanas. *</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Navigation Buttons -->
+                        <div class="flex justify-between mt-8 pt-6 border-t-2 border-neutral-light">
+                            <button type="button" id="btn-back" class="btn-secondary hidden">Volver</button>
+                            <button type="button" id="btn-save" class="btn-tertiary">Guardar Progreso</button>
+                            <button type="button" id="btn-next" class="btn-primary">Siguiente</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-neutral-black text-neutral-white py-12">
+        <div class="container-custom px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-accent-900 rounded-lg flex items-center justify-center">
+                            <span class="text-neutral-black font-bold text-xl">P</span>
+                        </div>
+                        <span class="ml-2 font-sans font-bold text-xl">PARCHANAS</span>
+                    </div>
+                    <p class="text-neutral-gray text-sm">Construyendo amistades para toda la vida desde 1995.</p>
+                </div>
+                <div>
+                    <h4 class="font-sans font-bold text-lg mb-4">Enlaces Rápidos</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="trust-and-safety.html" class="text-neutral-gray hover:text-accent-900">Confianza & Seguridad</a></li>
+                        <li><a href="programs.html" class="text-neutral-gray hover:text-accent-900">Programas</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-sans font-bold text-lg mb-4">Recursos</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="parent-faq.html" class="text-neutral-gray hover:text-accent-900">Preguntas Frecuentes</a></li>
+                        <li><a href="contact.html" class="text-neutral-gray hover:text-accent-900">Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-sans font-bold text-lg mb-4">Contacto</h4>
+                    <ul class="space-y-2 text-sm text-neutral-gray">
+                        <li><a href="tel:+5491112345678" class="hover:text-accent-900">📞 +54 9 11 1234-5678</a></li>
+                        <li><a href="mailto:info@parchanas.com" class="hover:text-accent-900">✉️ info@parchanas.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-neutral-gray pt-8 text-center text-sm text-neutral-gray">
+                <p>&copy; 2024 Camp Parchanas. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/registration.js"></script>
+</body>
+</html>

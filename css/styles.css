@@ -1,0 +1,187 @@
+/* Parchanas Reborn - Global Styles */
+
+/* Import Tailwind directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Merriweather:wght@300;400;700&display=swap');
+
+/* Base Layer - Typography & Global Resets */
+@layer base {
+  body {
+    @apply font-serif text-body text-neutral-dark bg-neutral-white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans font-bold text-primary-900;
+  }
+
+  h1 {
+    @apply text-5xl md:text-6xl leading-tight mb-6;
+  }
+
+  h2 {
+    @apply text-4xl md:text-5xl leading-tight mb-5;
+  }
+
+  h3 {
+    @apply text-3xl md:text-4xl leading-snug mb-4;
+  }
+
+  h4 {
+    @apply text-2xl md:text-3xl leading-snug mb-4;
+  }
+
+  p {
+    @apply mb-4;
+  }
+
+  a {
+    @apply text-primary-700 hover:text-primary-900 transition-colors duration-200;
+  }
+}
+
+/* Component Layer - Reusable Button Components */
+@layer components {
+  /* Primary Button - High-contrast "sunshine yellow" CTA */
+  .btn-primary {
+    @apply inline-block px-8 py-4 bg-accent-900 text-neutral-black font-sans font-bold text-lg rounded-lg
+           shadow-md hover:bg-accent-800 hover:shadow-lg hover:-translate-y-0.5
+           active:translate-y-0 transition-all duration-200 cursor-pointer;
+  }
+
+  /* Secondary Button - Clean white with primary border */
+  .btn-secondary {
+    @apply inline-block px-8 py-4 bg-neutral-white text-primary-900 border-2 border-primary-900
+           font-sans font-bold text-lg rounded-lg shadow-sm
+           hover:bg-primary-900 hover:text-neutral-white hover:shadow-md hover:-translate-y-0.5
+           active:translate-y-0 transition-all duration-200 cursor-pointer;
+  }
+
+  /* Tertiary Button - Simple text link with primary color */
+  .btn-tertiary {
+    @apply inline-block px-4 py-2 text-primary-700 font-sans font-semibold text-lg
+           hover:text-primary-900 hover:underline transition-all duration-200 cursor-pointer;
+  }
+
+  /* Card Component - Soft shadow, clean white */
+  .card {
+    @apply bg-neutral-white rounded-xl shadow-card p-6 hover:shadow-lg transition-shadow duration-300;
+  }
+
+  /* Staff Bio Card - Specialized card for team members */
+  .staff-card {
+    @apply card text-center space-y-4;
+  }
+
+  .staff-card img {
+    @apply w-48 h-48 mx-auto rounded-full object-cover border-4 border-accent-900;
+  }
+
+  .staff-card h3 {
+    @apply text-2xl font-sans font-bold text-primary-900 mb-1;
+  }
+
+  .staff-card .role {
+    @apply text-lg font-sans font-medium text-accent-900 mb-2;
+  }
+
+  .staff-card .qualifications {
+    @apply text-sm font-serif text-neutral-gray italic mb-3;
+  }
+
+  .staff-card .bio {
+    @apply text-base font-serif text-neutral-dark;
+  }
+
+  /* Section Styling - Consistent padding & spacing */
+  .section {
+    @apply py-16 md:py-24 px-4 md:px-8;
+  }
+
+  .section-gray {
+    @apply section bg-neutral-light;
+  }
+
+  .section-white {
+    @apply section bg-neutral-white;
+  }
+
+  .section-primary {
+    @apply section bg-primary-900 text-neutral-white;
+  }
+
+  .section-secondary {
+    @apply section bg-secondary-800 text-neutral-white;
+  }
+
+  /* Container - Max width with auto margins */
+  .container-custom {
+    @apply max-w-7xl mx-auto;
+  }
+
+  /* Trust Badge Component */
+  .trust-badge {
+    @apply flex items-center justify-center gap-3 p-4 bg-neutral-white rounded-lg shadow-soft;
+  }
+
+  .trust-badge svg {
+    @apply w-8 h-8 text-accent-900;
+  }
+
+  .trust-badge span {
+    @apply font-sans font-semibold text-primary-900;
+  }
+}
+
+/* Utility Layer - Custom utilities */
+@layer utilities {
+  /* Smooth scrolling for anchor links */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Text shadow for hero overlays */
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  }
+
+  /* Gradient overlays for hero sections */
+  .gradient-overlay {
+    background: linear-gradient(135deg, rgba(26, 35, 126, 0.9) 0%, rgba(46, 125, 50, 0.8) 100%);
+  }
+}
+
+/* Custom Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Sticky Header Styling */
+.header-sticky {
+  @apply sticky top-0 z-50 bg-neutral-white shadow-md;
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-open {
+  @apply max-h-screen opacity-100;
+}
+
+.mobile-menu-closed {
+  @apply max-h-0 opacity-0 overflow-hidden;
+}

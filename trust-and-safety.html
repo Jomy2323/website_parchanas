@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conoce al equipo de Camp Parchanas. Personal certificado, medidas de seguridad rigurosas, y un compromiso inquebrantable con el bienestar de tu hijo.">
+    <title>Confianza & Seguridad - Camp Parchanas</title>
+    <link rel="stylesheet" href="css/output.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+
+    <!-- Header Navigation - Sticky -->
+    <header class="header-sticky">
+        <nav class="container-custom px-4 py-4 flex items-center justify-between">
+            <a href="index.html" class="flex items-center">
+                <div class="w-12 h-12 bg-primary-900 rounded-lg flex items-center justify-center">
+                    <span class="text-accent-900 font-bold text-2xl">P</span>
+                </div>
+                <span class="ml-3 font-sans font-bold text-2xl text-primary-900">PARCHANAS</span>
+            </a>
+
+            <div class="hidden md:flex items-center gap-8">
+                <a href="trust-and-safety.html" class="font-sans font-semibold text-accent-900 border-b-2 border-accent-900">Confianza & Seguridad</a>
+                <a href="programs.html" class="font-sans font-semibold text-primary-900 hover:text-accent-900 transition-colors">Programas</a>
+                <a href="dates-and-rates.html" class="font-sans font-semibold text-primary-900 hover:text-accent-900 transition-colors">Fechas & Tarifas</a>
+                <a href="parent-faq.html" class="font-sans font-semibold text-primary-900 hover:text-accent-900 transition-colors">Preguntas</a>
+                <a href="register.html" class="btn-primary">Inscribirse Ahora</a>
+            </div>
+
+            <button id="mobile-menu-toggle" class="md:hidden p-2 text-primary-900">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </nav>
+
+        <div id="mobile-menu" class="mobile-menu-closed md:hidden bg-neutral-light transition-all duration-300">
+            <div class="container-custom px-4 py-4 flex flex-col gap-4">
+                <a href="trust-and-safety.html" class="font-sans font-semibold text-accent-900 py-2">Confianza & Seguridad</a>
+                <a href="programs.html" class="font-sans font-semibold text-primary-900 py-2">Programas</a>
+                <a href="dates-and-rates.html" class="font-sans font-semibold text-primary-900 py-2">Fechas & Tarifas</a>
+                <a href="parent-faq.html" class="font-sans font-semibold text-primary-900 py-2">Preguntas</a>
+                <a href="register.html" class="btn-primary w-full text-center">Inscribirse Ahora</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="section-primary py-20">
+        <div class="container-custom px-4 text-center">
+            <h1 class="text-6xl md:text-7xl font-sans font-bold text-neutral-white mb-6">
+                Nuestro Compromiso Con La Seguridad de Tu Hijo
+            </h1>
+            <p class="text-xl md:text-2xl font-serif text-neutral-white max-w-4xl mx-auto">
+                En Parchanas, entendemos que confiar tu hijo a nuestro cuidado es una decisión profunda.
+                Esta página existe para responder una sola pregunta: <strong>"¿Por qué deberías confiar en nosotros?"</strong>
+            </p>
+        </div>
+    </section>
+
+    <!-- Trust Statement -->
+    <section class="section-white">
+        <div class="container-custom px-4">
+            <div class="max-w-4xl mx-auto bg-accent-50 border-l-4 border-accent-900 p-8 rounded-lg">
+                <div class="flex items-start gap-4">
+                    <svg class="w-12 h-12 text-accent-900 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    <div>
+                        <h3 class="text-2xl font-sans font-bold text-primary-900 mb-3">Nuestra Promesa de Seguridad</h3>
+                        <p class="text-lg font-serif text-neutral-dark leading-relaxed">
+                            <strong>La seguridad de tu hijo es nuestra máxima prioridad, sin excepción.</strong>
+                            Todo el personal de Parchanas—desde consejeros hasta el equipo de cocina—pasa por un riguroso proceso de entrevistas,
+                            verificación de referencias y una verificación exhaustiva de antecedentes penales a nivel nacional.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet the Leadership Team -->
+    <section class="section-gray">
+        <div class="container-custom px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-primary-900 mb-4">Conoce a Nuestro Liderazgo</h2>
+                <p class="text-xl font-serif text-neutral-dark max-w-3xl mx-auto">
+                    Estos son los profesionales dedicados que guían la visión, valores y operaciones diarias de Camp Parchanas.
+                </p>
+            </div>
+
+            <!-- Leadership Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+
+                <!-- Director Bio Card -->
+                <div class="staff-card">
+                    <div class="w-48 h-48 mx-auto mb-4 rounded-full bg-gradient-to-br from-primary-300 to-primary-600 flex items-center justify-center">
+                        <span class="text-6xl text-neutral-white">👨‍🏫</span>
+                    </div>
+                    <h3 class="text-2xl font-sans font-bold text-primary-900">Dr. Alejandro Parchanas</h3>
+                    <p class="role text-lg font-sans font-semibold text-accent-900 mb-2">Director de Campamento</p>
+                    <p class="qualifications text-sm font-serif text-neutral-gray italic mb-3">
+                        M.Ed. en Psicología Infantil | 25 años en Educación | Certificado RCP & Primeros Auxilios
+                    </p>
+                    <p class="bio text-base font-serif text-neutral-dark">
+                        Alejandro fundó Parchanas en 1995 con la visión de crear un espacio donde los niños puedan crecer libre de pantallas.
+                        Ex maestro de escuela primaria, entiende profundamente las necesidades de desarrollo de cada grupo de edad.
+                    </p>
+                </div>
+
+                <!-- Head Counselor Bio Card -->
+                <div class="staff-card">
+                    <div class="w-48 h-48 mx-auto mb-4 rounded-full bg-gradient-to-br from-secondary-300 to-secondary-600 flex items-center justify-center">
+                        <span class="text-6xl text-neutral-white">👩‍🎓</span>
+                    </div>
+                    <h3 class="text-2xl font-sans font-bold text-primary-900">Lucía Fernández</h3>
+                    <p class="role text-lg font-sans font-semibold text-accent-900 mb-2">Jefa de Consejeros</p>
+                    <p class="qualifications text-sm font-serif text-neutral-gray italic mb-3">
+                        B.A. en Recreación al Aire Libre | Wilderness First Responder | 12 años en Parchanas
+                    </p>
+                    <p class="bio text-base font-serif text-neutral-dark">
+                        Lucía comenzó como consejera junior en 2012 y ha crecido con Parchanas. Su pasión por el aire libre es contagiosa,
+                        y es responsable de capacitar a todo nuestro equipo de consejeros en protocolos de seguridad y prácticas de inclusión.
+                    </p>
+                </div>
+
+                <!-- Head of Waterfront Bio Card -->
+                <div class="staff-card">
+                    <div class="w-48 h-48 mx-auto mb-4 rounded-full bg-gradient-to-br from-accent-300 to-accent-600 flex items-center justify-center">
+                        <span class="text-6xl text-neutral-white">🏊‍♂️</span>
+                    </div>
+                    <h3 class="text-2xl font-sans font-bold text-primary-900">Martín Suárez</h3>
+                    <p class="role text-lg font-sans font-semibold text-accent-900 mb-2">Director de Actividades Acuáticas</p>
+                    <p class="qualifications text-sm font-serif text-neutral-gray italic mb-3">
+                        Lifeguard Certificado | Water Safety Instructor | RCP & Primeros Auxilios
+                    </p>
+                    <p class="bio text-base font-serif text-neutral-dark">
+                        Martín supervisa todas nuestras actividades acuáticas con cero incidentes en 8 años. Ex nadador competitivo,
+                        garantiza que cada niño, desde principiantes hasta avanzados, se sienta seguro y desafiado en el agua.
+                    </p>
+                </div>
+
+                <!-- Medical Staff Bio Card -->
+                <div class="staff-card">
+                    <div class="w-48 h-48 mx-auto mb-4 rounded-full bg-gradient-to-br from-primary-300 to-primary-600 flex items-center justify-center">
+                        <span class="text-6xl text-neutral-white">👩‍⚕️</span>
+                    </div>
+                    <h3 class="text-2xl font-sans font-bold text-primary-900">Dra. Carolina Méndez</h3>
+                    <p class="role text-lg font-sans font-semibold text-accent-900 mb-2">Enfermera en Sitio</p>
+                    <p class="qualifications text-sm font-serif text-neutral-gray italic mb-3">
+                        RN (Enfermera Registrada) | Especialista en Pediatría | 15 años de experiencia
+                    </p>
+                    <p class="bio text-base font-serif text-neutral-dark">
+                        Carolina está en el campamento 24/7 durante todas las sesiones. Gestiona todas las necesidades médicas,
+                        desde alergias hasta lesiones menores, con calma profesional y comunicación clara con los padres.
+                    </p>
+                </div>
+
+                <!-- Activities Director Bio Card -->
+                <div class="staff-card">
+                    <div class="w-48 h-48 mx-auto mb-4 rounded-full bg-gradient-to-br from-secondary-300 to-secondary-600 flex items-center justify-center">
+                        <span class="text-6xl text-neutral-white">🎨</span>
+                    </div>
+                    <h3 class="text-2xl font-sans font-bold text-primary-900">Sofía Ramírez</h3>
+                    <p class="role text-lg font-sans font-semibold text-accent-900 mb-2">Directora de Actividades Creativas</p>
+                    <p class="qualifications text-sm font-serif text-neutral-gray italic mb-3">
+                        B.F.A. en Artes Visuales | Instructora de Teatro | 7 años en Parchanas
+                    </p>
+                    <p class="bio text-base font-serif text-neutral-dark">
+                        Sofía lidera nuestros programas de arte, teatro y música. Su creatividad sin límites y su habilidad para
+                        conectar con niños tímidos han transformado a incontables campistas en artistas seguros.
+                    </p>
+                </div>
+
+                <!-- Lead Counselor Bio Card -->
+                <div class="staff-card">
+                    <div class="w-48 h-48 mx-auto mb-4 rounded-full bg-gradient-to-br from-accent-300 to-accent-600 flex items-center justify-center">
+                        <span class="text-6xl text-neutral-white">🧗‍♀️</span>
+                    </div>
+                    <h3 class="text-2xl font-sans font-bold text-primary-900">Diego Torres</h3>
+                    <p class="role text-lg font-sans font-semibold text-accent-900 mb-2">Consejero Líder - Aventureros</p>
+                    <p class="qualifications text-sm font-serif text-neutral-gray italic mb-3">
+                        Guía de Montañismo Certificado | Wilderness First Responder | Ex-Campista Parchanas
+                    </p>
+                    <p class="bio text-base font-serif text-neutral-dark">
+                        Diego asistió a Parchanas durante 6 años como niño y regresó como consejero. Ahora lidera nuestro programa
+                        de Aventureros (13-15 años), inspirando a adolescentes a superar sus límites de manera segura.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Team Philosophy -->
+            <div class="max-w-4xl mx-auto text-center">
+                <h3 class="text-3xl font-sans font-bold text-primary-900 mb-4">Nuestro Enfoque de Contratación</h3>
+                <p class="text-lg font-serif text-neutral-dark leading-relaxed mb-6">
+                    Cada miembro del equipo de Parchanas es elegido no solo por sus calificaciones técnicas,
+                    sino por su genuino amor por trabajar con niños, su paciencia, su empatía y su compromiso
+                    inquebrantable con la seguridad. Nuestro proceso de capacitación incluye:
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-neutral-white p-6 rounded-lg shadow-soft">
+                        <h4 class="font-sans font-bold text-primary-900 mb-2">40 Horas de Capacitación</h4>
+                        <p class="text-sm font-serif text-neutral-dark">Antes de la primera sesión de cada temporada</p>
+                    </div>
+                    <div class="bg-neutral-white p-6 rounded-lg shadow-soft">
+                        <h4 class="font-sans font-bold text-primary-900 mb-2">Certificaciones Obligatorias</h4>
+                        <p class="text-sm font-serif text-neutral-dark">RCP, Primeros Auxilios, Prevención de Abuso</p>
+                    </div>
+                    <div class="bg-neutral-white p-6 rounded-lg shadow-soft">
+                        <h4 class="font-sans font-bold text-primary-900 mb-2">Evaluaciones Continuas</h4>
+                        <p class="text-sm font-serif text-neutral-dark">Feedback semanal de padres y supervisión diaria</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Medical & Safety Protocols -->
+    <section class="section-white">
+        <div class="container-custom px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-primary-900 mb-4">Protocolos Médicos & de Seguridad</h2>
+                <p class="text-xl font-serif text-neutral-dark max-w-3xl mx-auto">
+                    Sistemas probados y personal capacitado para manejar cualquier situación.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Medical Staff Section -->
+                <div class="card">
+                    <div class="flex items-center gap-3 mb-4">
+                        <svg class="w-10 h-10 text-accent-900" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        <h3 class="text-2xl font-sans font-bold text-primary-900">Personal Médico en Sitio</h3>
+                    </div>
+                    <ul class="space-y-3 text-lg font-serif text-neutral-dark">
+                        <li class="flex items-start gap-3">
+                            <span class="text-accent-900 font-bold">✓</span>
+                            <span><strong>Enfermera Registrada (RN)</strong> presente 24/7 durante todas las sesiones de campamento.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-accent-900 font-bold">✓</span>
+                            <span><strong>Todo el personal líder</strong> está certificado en RCP y Primeros Auxilios por la Cruz Roja.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-accent-900 font-bold">✓</span>
+                            <span><strong>Hospital de emergencias</strong> a solo 15 minutos del campus con transporte dedicado.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-accent-900 font-bold">✓</span>
+                            <span><strong>Botiquín médico completo</strong> y sala de enfermería equipada en el sitio.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Allergy & Dietary Management -->
+                <div class="card">
+                    <div class="flex items-center gap-3 mb-4">
+                        <svg class="w-10 h-10 text-accent-900" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 000 2h6a1 1 0 100-2H7z" clip-rule="evenodd"/>
+                        </svg>
+                        <h3 class="text-2xl font-sans font-bold text-primary-900">Gestión de Alergias y Dietas</h3>
+                    </div>
+                    <ul class="space-y-3 text-lg font-serif text-neutral-dark">
+                        <li class="flex items-start gap-3">
+                            <span class="text-accent-900 font-bold">✓</span>
+                            <span><strong>Lista de alergias</strong> publicada en cocina y consultada antes de cada comida.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-accent-900 font-bold">✓</span>
+                            <span><strong>Dietas especiales</strong> (vegetariana, vegana, celíaca, kosher) acomodadas sin costo adicional.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-accent-900 font-bold">✓</span>
+                            <span><strong>EpiPens</strong> almacenados de forma segura y accesible con personal capacitado en su uso.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-accent-900 font-bold">✓</span>
+                            <span><strong>Comunicación con padres</strong> inmediata ante cualquier inquietud alimentaria o médica.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Emergency Procedures -->
+                <div class="card lg:col-span-2">
+                    <div class="flex items-center gap-3 mb-4">
+                        <svg class="w-10 h-10 text-accent-900" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                        </svg>
+                        <h3 class="text-2xl font-sans font-bold text-primary-900">Procedimientos de Emergencia</h3>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div>
+                            <h4 class="font-sans font-bold text-primary-900 mb-2">Clima Extremo</h4>
+                            <p class="text-neutral-dark">Sistema de alerta temprana, refugios designados, protocolos de evacuación practicados mensualmente.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-sans font-bold text-primary-900 mb-2">Incendios</h4>
+                            <p class="text-neutral-dark">Simulacros de incendio semanales, extintores en todas las áreas, sistema de alarma conectado a bomberos.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-sans font-bold text-primary-900 mb-2">Lesiones/Emergencias Médicas</h4>
+                            <p class="text-neutral-dark">Protocolo claro: evaluación inmediata por RN, notificación a padres, transporte de emergencia si es necesario.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Health Forms -->
+                <div class="card lg:col-span-2 bg-secondary-50">
+                    <h3 class="text-2xl font-sans font-bold text-primary-900 mb-4">Formularios de Salud Requeridos</h3>
+                    <p class="text-lg font-serif text-neutral-dark mb-4">
+                        Para garantizar que podemos brindar el mejor cuidado a tu hijo, todos los campistas deben presentar los siguientes formularios antes del primer día:
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#" class="btn-secondary">📋 Formulario de Salud (PDF)</a>
+                        <a href="#" class="btn-secondary">💉 Registro de Vacunación (PDF)</a>
+                        <a href="#" class="btn-secondary">🏥 Autorización Médica (PDF)</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Accreditations & Affiliations -->
+    <section class="section-gray">
+        <div class="container-custom px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-primary-900 mb-4">Acreditaciones & Afiliaciones</h2>
+                <p class="text-xl font-serif text-neutral-dark max-w-3xl mx-auto">
+                    Nuestro compromiso con la excelencia está validado por organizaciones de terceros reconocidas a nivel nacional.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- ACA Accreditation -->
+                <div class="card text-center">
+                    <div class="w-32 h-32 mx-auto mb-4 bg-primary-900 rounded-full flex items-center justify-center">
+                        <svg class="w-16 h-16 text-accent-900" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-sans font-bold text-primary-900 mb-2">Acreditado por ACA</h3>
+                    <p class="text-neutral-dark">
+                        <strong>American Camp Association</strong> - El estándar oro en seguridad y excelencia en campamentos. Menos del 25% de los campamentos logran esta acreditación.
+                    </p>
+                </div>
+
+                <!-- Family Business Badge -->
+                <div class="card text-center">
+                    <div class="w-32 h-32 mx-auto mb-4 bg-secondary-800 rounded-full flex items-center justify-center">
+                        <svg class="w-16 h-16 text-accent-900" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-sans font-bold text-primary-900 mb-2">Empresa Familiar desde 1995</h3>
+                    <p class="text-neutral-dark">
+                        No somos una franquicia ni una corporación. Somos una familia que trata a cada campista como si fuera propio, durante casi 30 años.
+                    </p>
+                </div>
+
+                <!-- Safety Certified Badge -->
+                <div class="card text-center">
+                    <div class="w-32 h-32 mx-auto mb-4 bg-accent-900 rounded-full flex items-center justify-center">
+                        <svg class="w-16 h-16 text-neutral-black" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-sans font-bold text-primary-900 mb-2">Personal 100% Certificado</h3>
+                    <p class="text-neutral-dark">
+                        Todo nuestro personal completa capacitación obligatoria en RCP, Primeros Auxilios, Prevención de Abuso y Protección Infantil.
+                    </p>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <p class="text-lg font-serif text-neutral-dark mb-6">
+                    ¿Tienes preguntas sobre nuestros protocolos de seguridad?
+                </p>
+                <a href="contact.html" class="btn-primary">Contáctanos Directamente</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final Trust CTA -->
+    <section class="section-primary">
+        <div class="container-custom px-4 text-center">
+            <h2 class="text-neutral-white mb-6">Confía en Nosotros Con Tu Hijo</h2>
+            <p class="text-xl font-serif text-neutral-white mb-8 max-w-3xl mx-auto">
+                Entendemos que la seguridad no es negociable. Por eso hemos construido cada sistema, capacitado a cada miembro del equipo,
+                y ganado cada acreditación con un solo objetivo: ganarnos tu confianza.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="register.html" class="btn-primary text-xl px-12 py-5">Inscribirse Ahora</a>
+                <a href="programs.html" class="btn-secondary text-xl px-12 py-5">Ver Programas</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-neutral-black text-neutral-white py-12">
+        <div class="container-custom px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-accent-900 rounded-lg flex items-center justify-center">
+                            <span class="text-neutral-black font-bold text-xl">P</span>
+                        </div>
+                        <span class="ml-2 font-sans font-bold text-xl">PARCHANAS</span>
+                    </div>
+                    <p class="text-neutral-gray text-sm">Construyendo amistades para toda la vida desde 1995.</p>
+                </div>
+
+                <div>
+                    <h4 class="font-sans font-bold text-lg mb-4">Enlaces Rápidos</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="trust-and-safety.html" class="text-neutral-gray hover:text-accent-900 transition-colors">Confianza & Seguridad</a></li>
+                        <li><a href="programs.html" class="text-neutral-gray hover:text-accent-900 transition-colors">Programas</a></li>
+                        <li><a href="dates-and-rates.html" class="text-neutral-gray hover:text-accent-900 transition-colors">Fechas & Tarifas</a></li>
+                        <li><a href="a-day-in-the-life.html" class="text-neutral-gray hover:text-accent-900 transition-colors">Un Día en Parchanas</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-sans font-bold text-lg mb-4">Recursos</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="parent-faq.html" class="text-neutral-gray hover:text-accent-900 transition-colors">Preguntas Frecuentes</a></li>
+                        <li><a href="#" class="text-neutral-gray hover:text-accent-900 transition-colors">Manual para Padres (PDF)</a></li>
+                        <li><a href="#" class="text-neutral-gray hover:text-accent-900 transition-colors">Lista de Empaque (PDF)</a></li>
+                        <li><a href="contact.html" class="text-neutral-gray hover:text-accent-900 transition-colors">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-sans font-bold text-lg mb-4">Contacto</h4>
+                    <ul class="space-y-2 text-sm text-neutral-gray">
+                        <li><a href="tel:+5491112345678" class="hover:text-accent-900 transition-colors">📞 +54 9 11 1234-5678</a></li>
+                        <li><a href="mailto:info@parchanas.com" class="hover:text-accent-900 transition-colors">✉️ info@parchanas.com</a></li>
+                        <li>📍 Buenos Aires, Argentina</li>
+                    </ul>
+                    <div class="flex gap-4 mt-4">
+                        <a href="#" class="text-neutral-gray hover:text-accent-900 transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                        <a href="#" class="text-neutral-gray hover:text-accent-900 transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-neutral-gray pt-8 text-center text-sm text-neutral-gray">
+                <p>&copy; 2024 Camp Parchanas. Todos los derechos reservados. | <a href="#" class="hover:text-accent-900">Política de Privacidad</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+
+</body>
+</html>

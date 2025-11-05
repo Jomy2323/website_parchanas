@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Programas de verano Camp Parchanas para edades 7-15. Aventuras diseñadas por edad para maximizar diversión, aprendizaje y seguridad.">
+    <title>Programas - Camp Parchanas</title>
+    <link rel="stylesheet" href="css/output.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header-sticky">
+        <nav class="container-custom px-4 py-4 flex items-center justify-between">
+            <a href="index.html" class="flex items-center">
+                <div class="w-12 h-12 bg-primary-900 rounded-lg flex items-center justify-center">
+                    <span class="text-accent-900 font-bold text-2xl">P</span>
+                </div>
+                <span class="ml-3 font-sans font-bold text-2xl text-primary-900">PARCHANAS</span>
+            </a>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="trust-and-safety.html" class="font-sans font-semibold text-primary-900 hover:text-accent-900 transition-colors">Confianza & Seguridad</a>
+                <a href="programs.html" class="font-sans font-semibold text-accent-900 border-b-2 border-accent-900">Programas</a>
+                <a href="dates-and-rates.html" class="font-sans font-semibold text-primary-900 hover:text-accent-900 transition-colors">Fechas & Tarifas</a>
+                <a href="parent-faq.html" class="font-sans font-semibold text-primary-900 hover:text-accent-900 transition-colors">Preguntas</a>
+                <a href="register.html" class="btn-primary">Inscribirse Ahora</a>
+            </div>
+            <button id="mobile-menu-toggle" class="md:hidden p-2 text-primary-900">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="mobile-menu-closed md:hidden bg-neutral-light transition-all duration-300">
+            <div class="container-custom px-4 py-4 flex flex-col gap-4">
+                <a href="trust-and-safety.html" class="font-sans font-semibold text-primary-900 py-2">Confianza & Seguridad</a>
+                <a href="programs.html" class="font-sans font-semibold text-accent-900 py-2">Programas</a>
+                <a href="dates-and-rates.html" class="font-sans font-semibold text-primary-900 py-2">Fechas & Tarifas</a>
+                <a href="parent-faq.html" class="font-sans font-semibold text-primary-900 py-2">Preguntas</a>
+                <a href="register.html" class="btn-primary w-full text-center">Inscribirse Ahora</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="section-primary py-20">
+        <div class="container-custom px-4 text-center">
+            <h1 class="text-6xl md:text-7xl font-sans font-bold text-neutral-white mb-6">Programas Diseñados Por Edad</h1>
+            <p class="text-xl md:text-2xl font-serif text-neutral-white max-w-4xl mx-auto">
+                Cada grupo de edad tiene necesidades únicas. Nuestros programas están cuidadosamente diseñados para maximizar la diversión, el aprendizaje y la seguridad.
+            </p>
+        </div>
+    </section>
+
+    <!-- Programs Grid -->
+    <section class="section-white">
+        <div class="container-custom px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Exploradores (Pathfinders) -->
+                <div class="card hover:scale-105 transition-transform duration-300">
+                    <div class="h-64 bg-gradient-to-br from-accent-200 to-accent-500 rounded-lg mb-6 flex items-center justify-center">
+                        <span class="text-8xl">🧭</span>
+                    </div>
+                    <h2 class="text-3xl font-sans font-bold text-primary-900 mb-2">Exploradores</h2>
+                    <p class="text-xl font-sans font-semibold text-accent-900 mb-4">Edades 7-9</p>
+                    <p class="text-lg text-neutral-dark mb-6">
+                        Introducción suave a la vida del campamento con énfasis en construir confianza, hacer amigos y descubrir nuevas pasiones a través del juego supervisado.
+                    </p>
+                    <h4 class="font-sans font-bold text-primary-900 mb-2">Actividades Incluyen:</h4>
+                    <ul class="space-y-2 text-neutral-dark mb-6">
+                        <li>✓ Natación & Juegos Acuáticos</li>
+                        <li>✓ Arte & Manualidades</li>
+                        <li>✓ Cuentacuentos & Teatro</li>
+                        <li>✓ Senderismo Guiado</li>
+                        <li>✓ Juegos de Equipo</li>
+                    </ul>
+                    <a href="programs/pathfinders.html" class="btn-primary w-full text-center">Más Información</a>
+                </div>
+
+                <!-- Pioneros (Trailblazers) -->
+                <div class="card hover:scale-105 transition-transform duration-300">
+                    <div class="h-64 bg-gradient-to-br from-secondary-200 to-secondary-500 rounded-lg mb-6 flex items-center justify-center">
+                        <span class="text-8xl">🏕️</span>
+                    </div>
+                    <h2 class="text-3xl font-sans font-bold text-primary-900 mb-2">Pioneros</h2>
+                    <p class="text-xl font-sans font-semibold text-accent-900 mb-4">Edades 10-12</p>
+                    <p class="text-lg text-neutral-dark mb-6">
+                        Aventuras más desafiantes con oportunidades de liderazgo. Kayak, escalada, robótica y más, diseñado para construir independencia y trabajo en equipo.
+                    </p>
+                    <h4 class="font-sans font-bold text-primary-900 mb-2">Actividades Incluyen:</h4>
+                    <ul class="space-y-2 text-neutral-dark mb-6">
+                        <li>✓ Kayak & Paddle Board</li>
+                        <li>✓ Escalada en Roca</li>
+                        <li>✓ Robótica & Codificación</li>
+                        <li>✓ Fogatas & Campismo</li>
+                        <li>✓ Proyectos de Equipo</li>
+                    </ul>
+                    <a href="programs/trailblazers.html" class="btn-primary w-full text-center">Más Información</a>
+                </div>
+
+                <!-- Aventureros (Voyagers) -->
+                <div class="card hover:scale-105 transition-transform duration-300">
+                    <div class="h-64 bg-gradient-to-br from-primary-200 to-primary-500 rounded-lg mb-6 flex items-center justify-center">
+                        <span class="text-8xl">⛰️</span>
+                    </div>
+                    <h2 class="text-3xl font-sans font-bold text-primary-900 mb-2">Aventureros</h2>
+                    <p class="text-xl font-sans font-semibold text-accent-900 mb-4">Edades 13-15</p>
+                    <p class="text-lg text-neutral-dark mb-6">
+                        Nuestro programa premium para adolescentes. Expediciones de varios días, proyectos de servicio comunitario y desarrollo de habilidades de liderazgo real.
+                    </p>
+                    <h4 class="font-sans font-bold text-primary-900 mb-2">Actividades Incluyen:</h4>
+                    <ul class="space-y-2 text-neutral-dark mb-6">
+                        <li>✓ Expediciones de 3 Días</li>
+                        <li>✓ Servicio Comunitario</li>
+                        <li>✓ Liderazgo Avanzado</li>
+                        <li>✓ Navegación & Supervivencia</li>
+                        <li>✓ Proyectos Independientes</li>
+                    </ul>
+                    <a href="programs/voyagers.html" class="btn-primary w-full text-center">Más Información</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section-primary">
+        <div class="container-custom px-4 text-center">
+            <h2 class="text-neutral-white mb-6">¿Listo Para Elegir el Programa Perfecto?</h2>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="dates-and-rates.html" class="btn-primary text-xl px-12 py-5">Ver Fechas & Tarifas</a>
+                <a href="register.html" class="btn-secondary text-xl px-12 py-5">Inscribirse Ahora</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-neutral-black text-neutral-white py-12">
+        <div class="container-custom px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-accent-900 rounded-lg flex items-center justify-center">
+                            <span class="text-neutral-black font-bold text-xl">P</span>
+                        </div>
+                        <span class="ml-2 font-sans font-bold text-xl">PARCHANAS</span>
+                    </div>
+                    <p class="text-neutral-gray text-sm">Construyendo amistades para toda la vida desde 1995.</p>
+                </div>
+                <div>
+                    <h4 class="font-sans font-bold text-lg mb-4">Enlaces Rápidos</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="trust-and-safety.html" class="text-neutral-gray hover:text-accent-900 transition-colors">Confianza & Seguridad</a></li>
+                        <li><a href="programs.html" class="text-neutral-gray hover:text-accent-900 transition-colors">Programas</a></li>
+                        <li><a href="dates-and-rates.html" class="text-neutral-gray hover:text-accent-900 transition-colors">Fechas & Tarifas</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-sans font-bold text-lg mb-4">Recursos</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="parent-faq.html" class="text-neutral-gray hover:text-accent-900 transition-colors">Preguntas Frecuentes</a></li>
+                        <li><a href="contact.html" class="text-neutral-gray hover:text-accent-900 transition-colors">Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-sans font-bold text-lg mb-4">Contacto</h4>
+                    <ul class="space-y-2 text-sm text-neutral-gray">
+                        <li><a href="tel:+5491112345678" class="hover:text-accent-900 transition-colors">📞 +54 9 11 1234-5678</a></li>
+                        <li><a href="mailto:info@parchanas.com" class="hover:text-accent-900 transition-colors">✉️ info@parchanas.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-neutral-gray pt-8 text-center text-sm text-neutral-gray">
+                <p>&copy; 2024 Camp Parchanas. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
