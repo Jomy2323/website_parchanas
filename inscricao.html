@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Inscreva-se nas Colónias de Férias da Herdade das Parchanas. Para crianças dos 6 aos 17 anos, épocas de Natal, Páscoa e Verão.">
+    <title>Inscrição - Herdade das Parchanas</title>
+    <link rel="stylesheet" href="css/output.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header-sticky">
+        <nav class="container-custom px-4 py-4 flex items-center justify-between">
+            <a href="index.html" class="flex items-center">
+                <div class="w-12 h-12 bg-primary-900 rounded-lg flex items-center justify-center">
+                    <span class="text-accent-900 font-bold text-2xl">P</span>
+                </div>
+                <span class="ml-3 font-sans font-bold text-2xl text-primary-900">PARCHANAS</span>
+            </a>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="sobre-nos.html" class="font-sans font-semibold text-primary-900 hover:text-accent-900 transition-colors">Sobre Nós</a>
+                <a href="programas.html" class="font-sans font-semibold text-primary-900 hover:text-accent-900 transition-colors">Programas</a>
+                <a href="atividades.html" class="font-sans font-semibold text-primary-900 hover:text-accent-900 transition-colors">Atividades</a>
+                <a href="instalacoes.html" class="font-sans font-semibold text-primary-900 hover:text-accent-900 transition-colors">Instalações</a>
+                <a href="contactos.html" class="font-sans font-semibold text-primary-900 hover:text-accent-900 transition-colors">Contactos</a>
+                <a href="inscricao.html" class="font-sans font-semibold text-accent-900 border-b-2 border-accent-900">Inscrever Agora</a>
+            </div>
+            <button id="mobile-menu-toggle" class="md:hidden p-2 text-primary-900">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="mobile-menu-closed md:hidden bg-neutral-light transition-all duration-300">
+            <div class="container-custom px-4 py-4 flex flex-col gap-4">
+                <a href="sobre-nos.html" class="font-sans font-semibold text-primary-900 py-2">Sobre Nós</a>
+                <a href="programas.html" class="font-sans font-semibold text-primary-900 py-2">Programas</a>
+                <a href="atividades.html" class="font-sans font-semibold text-primary-900 py-2">Atividades</a>
+                <a href="instalacoes.html" class="font-sans font-semibold text-primary-900 py-2">Instalações</a>
+                <a href="contactos.html" class="font-sans font-semibold text-primary-900 py-2">Contactos</a>
+                <a href="inscricao.html" class="font-sans font-semibold text-accent-900 py-2">Inscrever Agora</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="section-primary py-20">
+        <div class="container-custom px-4 text-center">
+            <h1 class="text-6xl md:text-7xl font-sans font-bold text-neutral-white mb-6">Inscreva-se Agora</h1>
+            <p class="text-xl md:text-2xl font-serif text-neutral-white max-w-4xl mx-auto">
+                Garanta o lugar do seu filho numa experiência inesquecível nas Parchanas. Colónias de Férias para crianças e jovens dos 6 aos 17 anos.
+            </p>
+        </div>
+    </section>
+
+    <!-- Formulário de Pré-Inscrição -->
+    <section class="section-white py-16">
+        <div class="container-custom px-4">
+            <div class="max-w-4xl mx-auto">
+
+                <!-- Aviso Importante -->
+                <div class="card bg-accent-50 border-l-4 border-accent-900 mb-12">
+                    <div class="flex items-start gap-4">
+                        <svg class="w-10 h-10 text-accent-900 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+                        </svg>
+                        <div>
+                            <h3 class="text-2xl font-sans font-bold text-primary-900 mb-2">Pré-Inscrição</h3>
+                            <p class="text-lg text-neutral-dark leading-relaxed">
+                                Este é um formulário de <strong>pré-inscrição</strong>. Após submeter, a nossa equipa entrará em contacto em breve para confirmar a disponibilidade e finalizar todos os detalhes.
+                            </p>
+                            <p class="text-base text-neutral-dark mt-3 italic">
+                                Para dúvidas imediatas, ligue-nos: <a href="tel:+351968145483" class="text-accent-900 font-bold underline">(+351) 968 145 483</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulário -->
+                <div class="card">
+                    <h2 class="text-3xl font-sans font-bold text-primary-900 mb-8 text-center">Formulário de Pré-Inscrição</h2>
+
+                    <form id="registration-form" class="space-y-8">
+
+                        <!-- Informações do Encarregado de Educação -->
+                        <div>
+                            <h3 class="text-2xl font-sans font-bold text-primary-900 mb-4 pb-2 border-b-2 border-accent-900">1. Encarregado de Educação</h3>
+                            <div class="space-y-4">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block font-sans font-semibold text-primary-900 mb-2">Nome Completo *</label>
+                                        <input type="text" name="parent-name" required class="w-full px-4 py-3 border-2 border-neutral-light rounded-lg focus:border-accent-900 focus:outline-none">
+                                    </div>
+                                    <div>
+                                        <label class="block font-sans font-semibold text-primary-900 mb-2">Email *</label>
+                                        <input type="email" name="parent-email" required class="w-full px-4 py-3 border-2 border-neutral-light rounded-lg focus:border-accent-900 focus:outline-none">
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block font-sans font-semibold text-primary-900 mb-2">Telefone *</label>
+                                        <input type="tel" name="parent-phone" required placeholder="+351..." class="w-full px-4 py-3 border-2 border-neutral-light rounded-lg focus:border-accent-900 focus:outline-none">
+                                    </div>
+                                    <div>
+                                        <label class="block font-sans font-semibold text-primary-900 mb-2">Telefone Alternativo</label>
+                                        <input type="tel" name="parent-phone-alt" placeholder="+351..." class="w-full px-4 py-3 border-2 border-neutral-light rounded-lg focus:border-accent-900 focus:outline-none">
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="block font-sans font-semibold text-primary-900 mb-2">Morada Completa *</label>
+                                    <textarea name="parent-address" required rows="2" class="w-full px-4 py-3 border-2 border-neutral-light rounded-lg focus:border-accent-900 focus:outline-none"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Informações do Participante -->
+                        <div>
+                            <h3 class="text-2xl font-sans font-bold text-primary-900 mb-4 pb-2 border-b-2 border-accent-900">2. Participante</h3>
+                            <div class="space-y-4">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block font-sans font-semibold text-primary-900 mb-2">Nome Completo *</label>
+                                        <input type="text" name="camper-name" required class="w-full px-4 py-3 border-2 border-neutral-light rounded-lg focus:border-accent-900 focus:outline-none">
+                                    </div>
+                                    <div>
+                                        <label class="block font-sans font-semibold text-primary-900 mb-2">Data de Nascimento *</label>
+                                        <input type="date" name="camper-dob" required class="w-full px-4 py-3 border-2 border-neutral-light rounded-lg focus:border-accent-900 focus:outline-none">
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block font-sans font-semibold text-primary-900 mb-2">Idade *</label>
+                                        <select name="camper-age" required class="w-full px-4 py-3 border-2 border-neutral-light rounded-lg focus:border-accent-900 focus:outline-none">
+                                            <option value="">Selecione a idade</option>
+                                            <option value="6">6 anos</option>
+                                            <option value="7">7 anos</option>
+                                            <option value="8">8 anos</option>
+                                            <option value="9">9 anos</option>
+                                            <option value="10">10 anos</option>
+                                            <option value="11">11 anos</option>
+                                            <option value="12">12 anos</option>
+                                            <option value="13">13 anos</option>
+                                            <option value="14">14 anos</option>
+                                            <option value="15">15 anos</option>
+                                            <option value="16">16 anos</option>
+                                            <option value="17">17 anos</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label class="block font-sans font-semibold text-primary-900 mb-2">Género *</label>
+                                        <select name="camper-gender" required class="w-full px-4 py-3 border-2 border-neutral-light rounded-lg focus:border-accent-900 focus:outline-none">
+                                            <option value="">Selecione o género</option>
+                                            <option value="feminino">Feminino</option>
+                                            <option value="masculino">Masculino</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Seleção de Época e Duração -->
+                        <div>
+                            <h3 class="text-2xl font-sans font-bold text-primary-900 mb-4 pb-2 border-b-2 border-accent-900">3. Época e Duração</h3>
+                            <div class="space-y-4">
+                                <div>
+                                    <label class="block font-sans font-semibold text-primary-900 mb-2">Época Pretendida *</label>
+                                    <select name="season" required class="w-full px-4 py-3 border-2 border-neutral-light rounded-lg focus:border-accent-900 focus:outline-none">
+                                        <option value="">Selecione a época</option>
+                                        <option value="natal">Natal</option>
+                                        <option value="pascoa">Páscoa</option>
+                                        <option value="verao">Verão</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block font-sans font-semibold text-primary-900 mb-2">Duração *</label>
+                                    <div class="space-y-2">
+                                        <label class="flex items-center gap-3 p-4 border-2 border-neutral-light rounded-lg cursor-pointer hover:border-accent-900 transition-colors">
+                                            <input type="radio" name="duration" value="1-week" required class="w-5 h-5 text-accent-900">
+                                            <div>
+                                                <span class="font-sans font-bold text-primary-900">1 Semana</span>
+                                                <p class="text-sm text-neutral-dark">Domingo 16h - Sábado 10h</p>
+                                            </div>
+                                        </label>
+                                        <label class="flex items-center gap-3 p-4 border-2 border-neutral-light rounded-lg cursor-pointer hover:border-accent-900 transition-colors">
+                                            <input type="radio" name="duration" value="2-weeks" required class="w-5 h-5 text-accent-900">
+                                            <div>
+                                                <span class="font-sans font-bold text-primary-900">2 Semanas</span>
+                                                <p class="text-sm text-neutral-dark">Domingo 16h - Sábado 10h (duas semanas consecutivas)</p>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Informações Médicas e Alimentares -->
+                        <div>
+                            <h3 class="text-2xl font-sans font-bold text-primary-900 mb-4 pb-2 border-b-2 border-accent-900">4. Informações Médicas e Alimentares</h3>
+                            <div class="space-y-4">
+                                <div>
+                                    <label class="block font-sans font-semibold text-primary-900 mb-2">Alergias ou Restrições Alimentares</label>
+                                    <textarea name="allergies" rows="3" placeholder="Descreva quaisquer alergias, restrições alimentares ou dietas especiais (vegetariana, celíaca, etc.)" class="w-full px-4 py-3 border-2 border-neutral-light rounded-lg focus:border-accent-900 focus:outline-none"></textarea>
+                                </div>
+                                <div>
+                                    <label class="block font-sans font-semibold text-primary-900 mb-2">Medicação Regular</label>
+                                    <textarea name="medication" rows="3" placeholder="Liste qualquer medicação que o participante tome regularmente (nome, dosagem, horário)" class="w-full px-4 py-3 border-2 border-neutral-light rounded-lg focus:border-accent-900 focus:outline-none"></textarea>
+                                    <p class="text-sm text-neutral-gray mt-2 italic">Nota: Os medicamentos serão guardados e administrados pelos monitores</p>
+                                </div>
+                                <div>
+                                    <label class="block font-sans font-semibold text-primary-900 mb-2">Condições Médicas ou Informações Importantes</label>
+                                    <textarea name="medical-info" rows="3" placeholder="Qualquer informação médica relevante que devamos saber (asma, diabetes, necessidades especiais, etc.)" class="w-full px-4 py-3 border-2 border-neutral-light rounded-lg focus:border-accent-900 focus:outline-none"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Informações Adicionais -->
+                        <div>
+                            <h3 class="text-2xl font-sans font-bold text-primary-900 mb-4 pb-2 border-b-2 border-accent-900">5. Informações Adicionais</h3>
+                            <div class="space-y-4">
+                                <div>
+                                    <label class="block font-sans font-semibold text-primary-900 mb-2">Como soube das Parchanas?</label>
+                                    <select name="referral" class="w-full px-4 py-3 border-2 border-neutral-light rounded-lg focus:border-accent-900 focus:outline-none">
+                                        <option value="">Selecione uma opção</option>
+                                        <option value="amigos">Amigos ou familiares</option>
+                                        <option value="escola">Escola</option>
+                                        <option value="redes-sociais">Redes sociais</option>
+                                        <option value="pesquisa-online">Pesquisa online</option>
+                                        <option value="ja-participei">Já participei anteriormente</option>
+                                        <option value="outro">Outro</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block font-sans font-semibold text-primary-900 mb-2">Comentários ou Questões</label>
+                                    <textarea name="comments" rows="4" placeholder="Alguma questão, pedido especial ou informação adicional que gostaria de partilhar?" class="w-full px-4 py-3 border-2 border-neutral-light rounded-lg focus:border-accent-900 focus:outline-none"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Termos e Condições -->
+                        <div class="bg-accent-50 p-6 rounded-lg">
+                            <label class="flex items-start gap-3 cursor-pointer">
+                                <input type="checkbox" name="terms" required class="mt-1 w-5 h-5 text-accent-900">
+                                <div class="text-neutral-dark">
+                                    <p class="font-sans font-semibold text-primary-900">Aceito os termos e condições *</p>
+                                    <p class="text-sm mt-2">
+                                        Li e compreendo a <strong>política de cancelamento</strong> (reembolso total se cancelar 2+ semanas antes, sem reembolso se menos de 2 semanas). Compreendo que a minha inscrição será confirmada após contacto da equipa das Parchanas.
+                                    </p>
+                                </div>
+                            </label>
+                        </div>
+
+                        <!-- Botões -->
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center pt-6">
+                            <button type="submit" class="btn-primary text-xl px-12 py-5">Submeter Pré-Inscrição</button>
+                            <a href="contactos.html" class="btn-secondary text-xl px-12 py-5 text-center">Contactar-nos Primeiro</a>
+                        </div>
+
+                        <p class="text-sm text-neutral-gray text-center italic">
+                            * Campos obrigatórios. Os seus dados pessoais serão tratados de forma confidencial.
+                        </p>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Próximos Passos -->
+    <section class="section-gray py-12">
+        <div class="container-custom px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-center text-primary-900 mb-8">Próximos Passos</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="card text-center bg-neutral-white">
+                        <div class="text-5xl mb-4">✉️</div>
+                        <h3 class="text-xl font-sans font-bold text-primary-900 mb-2">1. Recebe Confirmação</h3>
+                        <p class="text-neutral-dark">Receberá um email de confirmação imediatamente após submeter</p>
+                    </div>
+                    <div class="card text-center bg-neutral-white">
+                        <div class="text-5xl mb-4">📞</div>
+                        <h3 class="text-xl font-sans font-bold text-primary-900 mb-2">2. Contacto da Equipa</h3>
+                        <p class="text-neutral-dark">A nossa equipa entrará em contacto em 24-48h para confirmar disponibilidade</p>
+                    </div>
+                    <div class="card text-center bg-neutral-white">
+                        <div class="text-5xl mb-4">✅</div>
+                        <h3 class="text-xl font-sans font-bold text-primary-900 mb-2">3. Finalizar Inscrição</h3>
+                        <p class="text-neutral-dark">Após confirmação, finalizamos todos os detalhes e pagamento</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-neutral-black text-neutral-white py-12">
+        <div class="container-custom px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-accent-900 rounded-lg flex items-center justify-center">
+                            <span class="text-neutral-black font-bold text-xl">P</span>
+                        </div>
+                        <span class="ml-2 font-sans font-bold text-xl">PARCHANAS</span>
+                    </div>
+                    <p class="text-neutral-gray text-sm">A criar amizades para toda a vida desde 1989.</p>
+                </div>
+                <div>
+                    <h4 class="font-sans font-bold text-lg mb-4">Links Rápidos</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="sobre-nos.html" class="text-neutral-gray hover:text-accent-900 transition-colors">Sobre Nós</a></li>
+                        <li><a href="programas.html" class="text-neutral-gray hover:text-accent-900 transition-colors">Programas</a></li>
+                        <li><a href="atividades.html" class="text-neutral-gray hover:text-accent-900 transition-colors">Atividades</a></li>
+                        <li><a href="instalacoes.html" class="text-neutral-gray hover:text-accent-900 transition-colors">Instalações</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-sans font-bold text-lg mb-4">Recursos</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="faq.html" class="text-neutral-gray hover:text-accent-900 transition-colors">Perguntas Frequentes</a></li>
+                        <li><a href="contactos.html" class="text-neutral-gray hover:text-accent-900 transition-colors">Contactos</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-sans font-bold text-lg mb-4">Contacto</h4>
+                    <ul class="space-y-2 text-sm text-neutral-gray">
+                        <li><a href="tel:+351968145483" class="hover:text-accent-900 transition-colors">📞 (+351) 968 145 483</a></li>
+                        <li><a href="tel:+351964094546" class="hover:text-accent-900 transition-colors">📞 (+351) 964 094 546</a></li>
+                        <li><a href="mailto:ceaas.parchanas@gmail.com" class="hover:text-accent-900 transition-colors">✉️ ceaas.parchanas@gmail.com</a></li>
+                        <li>📍 Torrão, Alentejo, Portugal</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-neutral-gray pt-8 text-center text-sm text-neutral-gray">
+                <p>&copy; 2024 Herdade das Parchanas - CEAAS. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Simple form submission handler
+        document.getElementById('registration-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Pré-inscrição submetida com sucesso! Receberá um email de confirmação em breve e a nossa equipa entrará em contacto.');
+            // In production, this would send data to a server
+            console.log('Form submitted');
+        });
+    </script>
+</body>
+</html>

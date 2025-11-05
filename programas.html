@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Programas da Herdade das Parchanas: Colónias de Férias (6-17 anos), Programas Escolares especializados e Team Building para empresas.">
+    <title>Programas - Herdade das Parchanas</title>
+    <link rel="stylesheet" href="css/output.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header-sticky">
+        <nav class="container-custom px-4 py-4 flex items-center justify-between">
+            <a href="index.html" class="flex items-center">
+                <div class="w-12 h-12 bg-primary-900 rounded-lg flex items-center justify-center">
+                    <span class="text-accent-900 font-bold text-2xl">P</span>
+                </div>
+                <span class="ml-3 font-sans font-bold text-2xl text-primary-900">PARCHANAS</span>
+            </a>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="sobre-nos.html" class="font-sans font-semibold text-primary-900 hover:text-accent-900 transition-colors">Sobre Nós</a>
+                <a href="programas.html" class="font-sans font-semibold text-accent-900 border-b-2 border-accent-900">Programas</a>
+                <a href="atividades.html" class="font-sans font-semibold text-primary-900 hover:text-accent-900 transition-colors">Atividades</a>
+                <a href="instalacoes.html" class="font-sans font-semibold text-primary-900 hover:text-accent-900 transition-colors">Instalações</a>
+                <a href="contactos.html" class="font-sans font-semibold text-primary-900 hover:text-accent-900 transition-colors">Contactos</a>
+                <a href="inscricao.html" class="btn-primary">Inscrever Agora</a>
+            </div>
+            <button id="mobile-menu-toggle" class="md:hidden p-2 text-primary-900">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="mobile-menu-closed md:hidden bg-neutral-light transition-all duration-300">
+            <div class="container-custom px-4 py-4 flex flex-col gap-4">
+                <a href="sobre-nos.html" class="font-sans font-semibold text-primary-900 py-2">Sobre Nós</a>
+                <a href="programas.html" class="font-sans font-semibold text-accent-900 py-2">Programas</a>
+                <a href="atividades.html" class="font-sans font-semibold text-primary-900 py-2">Atividades</a>
+                <a href="instalacoes.html" class="font-sans font-semibold text-primary-900 py-2">Instalações</a>
+                <a href="contactos.html" class="font-sans font-semibold text-primary-900 py-2">Contactos</a>
+                <a href="inscricao.html" class="btn-primary w-full text-center">Inscrever Agora</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="section-primary py-20">
+        <div class="container-custom px-4 text-center">
+            <h1 class="text-6xl md:text-7xl font-sans font-bold text-neutral-white mb-6">Os Nossos Programas</h1>
+            <p class="text-xl md:text-2xl font-serif text-neutral-white max-w-4xl mx-auto">
+                Desde colónias de férias para crianças e jovens, a programas escolares especializados e team building para empresas - experiências inesquecíveis no Alentejo.
+            </p>
+        </div>
+    </section>
+
+    <!-- Programs Grid -->
+    <section class="section-white">
+        <div class="container-custom px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+                <!-- Colónias de Férias -->
+                <div class="card hover:shadow-xl transition-shadow duration-300">
+                    <div class="h-64 bg-gradient-to-br from-accent-200 to-accent-500 rounded-lg mb-6 flex items-center justify-center">
+                        <span class="text-8xl">🏕️</span>
+                    </div>
+                    <h2 class="text-3xl font-sans font-bold text-primary-900 mb-2">Colónias de Férias</h2>
+                    <p class="text-xl font-sans font-semibold text-accent-900 mb-4">6-17 Anos</p>
+                    <p class="text-lg text-neutral-dark mb-6">
+                        O nosso programa principal! Experiências memoráveis durante o Natal, Páscoa e Verão. Uma ou duas semanas de aventura, amizade e crescimento pessoal no coração do Alentejo.
+                    </p>
+
+                    <div class="bg-secondary-50 p-4 rounded-lg mb-4">
+                        <h4 class="font-sans font-bold text-primary-900 mb-2">Detalhes:</h4>
+                        <ul class="space-y-1 text-sm text-neutral-dark">
+                            <li>📅 <strong>Épocas:</strong> Natal, Páscoa, Verão</li>
+                            <li>⏰ <strong>Duração:</strong> 7 ou 14 dias</li>
+                            <li>🕓 <strong>Horário:</strong> Domingo 16h - Sábado 10h</li>
+                            <li>👥 <strong>Capacidade:</strong> Mín. 20, Máx. 110/semana</li>
+                        </ul>
+                    </div>
+
+                    <h4 class="font-sans font-bold text-primary-900 mb-2">Destaques Semanais:</h4>
+                    <ul class="space-y-2 text-neutral-dark mb-6">
+                        <li>✓ Jantar de Gala às sextas-feiras</li>
+                        <li>✓ Jantares temáticos todas as noites</li>
+                        <li>✓ Jogos noturnos pela herdade</li>
+                        <li>✓ Torneios diários ao almoço</li>
+                        <li>✓ Fabrico de pão e pizzas</li>
+                        <li>✓ Contacto com animais</li>
+                    </ul>
+                    <a href="inscricao.html" class="btn-primary w-full text-center">Inscrever Agora</a>
+                </div>
+
+                <!-- Programas Escolares -->
+                <div class="card hover:shadow-xl transition-shadow duration-300">
+                    <div class="h-64 bg-gradient-to-br from-secondary-200 to-secondary-600 rounded-lg mb-6 flex items-center justify-center">
+                        <span class="text-8xl">🎓</span>
+                    </div>
+                    <h2 class="text-3xl font-sans font-bold text-primary-900 mb-2">Programas Escolares</h2>
+                    <p class="text-xl font-sans font-semibold text-accent-900 mb-4">Escolas e Grupos</p>
+                    <p class="text-lg text-neutral-dark mb-6">
+                        Propomos aos vossos alunos uma experiência de aprendizagem complementar diferente. Adaptamos e personalizamos programas de atividades de acordo com as vossas necessidades.
+                    </p>
+
+                    <div class="bg-accent-50 p-4 rounded-lg mb-4">
+                        <h4 class="font-sans font-bold text-primary-900 mb-2">Opções de Duração:</h4>
+                        <ul class="space-y-1 text-sm text-neutral-dark">
+                            <li>☀️ Um dia de desporto e aventura</li>
+                            <li>🌙 Dois dias e uma noite</li>
+                            <li>🏕️ Três dias e duas noites</li>
+                        </ul>
+                    </div>
+
+                    <h4 class="font-sans font-bold text-primary-900 mb-2">Programas Pedagógicos:</h4>
+                    <ul class="space-y-2 text-neutral-dark mb-6">
+                        <li>✓ Matemática Aplicada no Campo</li>
+                        <li>✓ Energias Renováveis</li>
+                        <li>✓ Floresta e Recursos Naturais</li>
+                        <li>✓ Nidificação das Cegonhas</li>
+                        <li>✓ Um Dia no Campo</li>
+                        <li>✓ Acantonamento Ambiental</li>
+                        <li>✓ A Azeitona (Out-Nov)</li>
+                        <li>✓ Viagens de Finalistas</li>
+                    </ul>
+                    <a href="contactos.html" class="btn-primary w-full text-center">Pedir Informações</a>
+                </div>
+
+                <!-- Team Building -->
+                <div class="card hover:shadow-xl transition-shadow duration-300">
+                    <div class="h-64 bg-gradient-to-br from-primary-200 to-primary-600 rounded-lg mb-6 flex items-center justify-center">
+                        <span class="text-8xl">🤝</span>
+                    </div>
+                    <h2 class="text-3xl font-sans font-bold text-primary-900 mb-2">Team Building</h2>
+                    <p class="text-xl font-sans font-semibold text-accent-900 mb-4">Empresas e Adultos</p>
+                    <p class="text-lg text-neutral-dark mb-6">
+                        Um conjunto de atividades realizadas com o objetivo de estimular o trabalho em equipa e o espírito de união. Desenvolvem-se competências de comunicação com colegas na resolução conjunta de problemas.
+                    </p>
+
+                    <div class="bg-primary-50 p-4 rounded-lg mb-4">
+                        <h4 class="font-sans font-bold text-primary-900 mb-2">Competências Desenvolvidas:</h4>
+                        <ul class="space-y-1 text-sm text-neutral-dark">
+                            <li>💼 Liderança</li>
+                            <li>🤝 Capacidade de trabalho em equipa</li>
+                            <li>❤️ Companheirismo</li>
+                            <li>🔒 Confiança entre participantes</li>
+                        </ul>
+                    </div>
+
+                    <h4 class="font-sans font-bold text-primary-900 mb-2">Ambiente Perfeito:</h4>
+                    <ul class="space-y-2 text-neutral-dark mb-6">
+                        <li>✓ Ambiente informal e descontraído</li>
+                        <li>✓ Atividades divertidas e desafiantes</li>
+                        <li>✓ Cenário natural único no Alentejo</li>
+                        <li>✓ Instalações completas e confortáveis</li>
+                        <li>✓ Refeições incluídas</li>
+                    </ul>
+                    <a href="contactos.html" class="btn-primary w-full text-center">Solicitar Proposta</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programas Escolares Detalhados -->
+    <section class="section-gray">
+        <div class="container-custom px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-primary-900 mb-4">Programas Escolares Detalhados</h2>
+                <p class="text-xl font-serif text-neutral-dark max-w-3xl mx-auto">
+                    Experiências de aprendizagem complementares adaptadas às necessidades dos vossos alunos
+                </p>
+            </div>
+
+            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                <!-- Matemática Aplicada no Campo -->
+                <div class="card bg-neutral-white">
+                    <div class="flex items-start gap-3 mb-3">
+                        <span class="text-3xl">📐</span>
+                        <div>
+                            <h3 class="text-xl font-sans font-bold text-primary-900">Matemática Aplicada no Campo</h3>
+                            <p class="text-neutral-dark mt-2">
+                                Percurso pedestre em grupo onde os alunos enfrentam problemas de campo que requerem conhecimentos de matemática: determinação de volumes, divisibilidade de números, semelhança de triângulos, equações, funções, probabilidades.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Energias Renováveis -->
+                <div class="card bg-neutral-white">
+                    <div class="flex items-start gap-3 mb-3">
+                        <span class="text-3xl">⚡</span>
+                        <div>
+                            <h3 class="text-xl font-sans font-bold text-primary-900">Energias Renováveis</h3>
+                            <p class="text-neutral-dark mt-2">
+                                Alinhado com o objetivo europeu 2020, focando em energias alternativas. Tópicos: conversão de energia mecânica em elétrica, indução eletromagnética, biodiesel, biogás, entre outros.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Floresta e Recursos Naturais -->
+                <div class="card bg-neutral-white">
+                    <div class="flex items-start gap-3 mb-3">
+                        <span class="text-3xl">🌲</span>
+                        <div>
+                            <h3 class="text-xl font-sans font-bold text-primary-900">Floresta e Recursos Naturais</h3>
+                            <p class="text-neutral-dark mt-2">
+                                Aprender a utilizar a floresta e compreender a importância da sua preservação. Exploração dos recursos naturais de forma sustentável.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nidificação das Cegonhas -->
+                <div class="card bg-neutral-white">
+                    <div class="flex items-start gap-3 mb-3">
+                        <span class="text-3xl">🦅</span>
+                        <div>
+                            <h3 class="text-xl font-sans font-bold text-primary-900">Nidificação das Cegonhas</h3>
+                            <p class="text-neutral-dark mt-2">
+                                O nosso programa original desde 1989! Tópicos: nidificação, migração, alimentação, habitat. Importância da preservação das aves. Inclui projeção de filme para fomentar interesse e curiosidade.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Um Dia no Campo -->
+                <div class="card bg-neutral-white">
+                    <div class="flex items-start gap-3 mb-3">
+                        <span class="text-3xl">🚜</span>
+                        <div>
+                            <h3 class="text-xl font-sans font-bold text-primary-900">Um Dia no Campo</h3>
+                            <p class="text-neutral-dark mt-2">
+                                Retrata a vida no campo. Os alunos participam diretamente em atividades agrícolas: cuidar dos animais, fazer pão, plantar e cuidar de árvores de fruto. Visão integrada da origem dos alimentos e processos de produção.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Acantonamento Ambiental -->
+                <div class="card bg-neutral-white">
+                    <div class="flex items-start gap-3 mb-3">
+                        <span class="text-3xl">🏕️</span>
+                        <div>
+                            <h3 class="text-xl font-sans font-bold text-primary-900">Acantonamento Ambiental</h3>
+                            <p class="text-neutral-dark mt-2">
+                                Programa com dormidas nas camaratas. Experiência completa de imersão ambiental com atividades práticas e pedagógicas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- A Azeitona -->
+                <div class="card bg-neutral-white">
+                    <div class="flex items-start gap-3 mb-3">
+                        <span class="text-3xl">🫒</span>
+                        <div>
+                            <h3 class="text-xl font-sans font-bold text-primary-900">A Azeitona (Ciclo de Produção de Azeite)</h3>
+                            <p class="text-neutral-dark mt-2">
+                                Realiza-se em outubro e novembro. Retrata o ciclo de produção de azeite e o estado das oliveiras. Experiência prática de apanha de azeitona.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Viagens de Finalistas -->
+                <div class="card bg-neutral-white">
+                    <div class="flex items-start gap-3 mb-3">
+                        <span class="text-3xl">🎓</span>
+                        <div>
+                            <h3 class="text-xl font-sans font-bold text-primary-900">Viagens de Finalistas/Graduados</h3>
+                            <p class="text-neutral-dark mt-2">
+                                "As Parchanas são uma excelente opção para a vossa viagem de finalistas, onde vos oferecemos uma experiência única, rica em Festa, Aventura e Ambiente." Programa personalizado de acordo com os interesses do grupo.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <div class="bg-accent-50 border-l-4 border-accent-900 p-6 rounded-lg max-w-4xl mx-auto">
+                    <p class="text-lg font-serif text-neutral-dark mb-4">
+                        <strong>O que trazer:</strong> Cartão de cidadão, repelente de insetos, protetor solar, chapéu, fato de banho, chinelos, toalha de banho e piscina, produtos de higiene pessoal, roupa desportiva confortável, calçado prático.
+                    </p>
+                    <p class="text-base font-serif text-neutral-dark italic">
+                        <strong>Para programas com dormida, trazer também:</strong> saco-cama, lençol, almofada, lanterna, pijama.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Política de Cancelamento -->
+    <section class="section-white">
+        <div class="container-custom px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-center text-primary-900 mb-8">Informações Importantes</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="card bg-secondary-50">
+                        <h3 class="text-xl font-sans font-bold text-primary-900 mb-3">Inscrição e Pagamento</h3>
+                        <ul class="space-y-2 text-neutral-dark">
+                            <li>✓ Inscrição formalizada através de preenchimento de formulário</li>
+                            <li>✓ Pagamento total na inscrição, OU</li>
+                            <li>✓ 50% na inscrição + 50% no dia de início</li>
+                            <li>✓ Métodos: Dinheiro, cheque ou transferência bancária</li>
+                        </ul>
+                    </div>
+
+                    <div class="card bg-primary-50">
+                        <h3 class="text-xl font-sans font-bold text-primary-900 mb-3">Política de Cancelamento</h3>
+                        <ul class="space-y-2 text-neutral-dark">
+                            <li>✓ <strong>2+ semanas antes:</strong> Reembolso total</li>
+                            <li>✓ <strong>Menos de 2 semanas:</strong> Sem reembolso</li>
+                            <li>✓ <strong>Reservas escolares:</strong> Sem reembolso após confirmação</li>
+                        </ul>
+                    </div>
+
+                    <div class="card bg-accent-50 md:col-span-2">
+                        <h3 class="text-xl font-sans font-bold text-primary-900 mb-3">Seguro e Segurança</h3>
+                        <p class="text-neutral-dark mb-3">
+                            O CEAAS disponibiliza seguro de responsabilidade civil e seguro de atividade para todos os participantes (exceto se tiverem seguro escolar ou outra cobertura). Seguro de trabalho para coordenador e monitores.
+                        </p>
+                        <p class="text-neutral-dark">
+                            <strong>Refeições:</strong> 5 refeições diárias (pequeno-almoço, almoço, lanche, jantar, ceia). Restrições alimentares/alergias são acomodadas - informar na reserva.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section-primary">
+        <div class="container-custom px-4 text-center">
+            <h2 class="text-neutral-white mb-6">Pronto Para Uma Experiência Inesquecível?</h2>
+            <p class="text-xl font-serif text-neutral-white mb-8 max-w-3xl mx-auto">
+                Inscreva-se nas nossas Colónias de Férias ou contacte-nos para saber mais sobre Programas Escolares e Team Building.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="inscricao.html" class="btn-primary text-xl px-12 py-5">Inscrever Agora</a>
+                <a href="contactos.html" class="btn-secondary text-xl px-12 py-5">Pedir Informações</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-neutral-black text-neutral-white py-12">
+        <div class="container-custom px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-accent-900 rounded-lg flex items-center justify-center">
+                            <span class="text-neutral-black font-bold text-xl">P</span>
+                        </div>
+                        <span class="ml-2 font-sans font-bold text-xl">PARCHANAS</span>
+                    </div>
+                    <p class="text-neutral-gray text-sm">A criar amizades para toda a vida desde 1989.</p>
+                </div>
+                <div>
+                    <h4 class="font-sans font-bold text-lg mb-4">Links Rápidos</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="sobre-nos.html" class="text-neutral-gray hover:text-accent-900 transition-colors">Sobre Nós</a></li>
+                        <li><a href="programas.html" class="text-neutral-gray hover:text-accent-900 transition-colors">Programas</a></li>
+                        <li><a href="atividades.html" class="text-neutral-gray hover:text-accent-900 transition-colors">Atividades</a></li>
+                        <li><a href="instalacoes.html" class="text-neutral-gray hover:text-accent-900 transition-colors">Instalações</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-sans font-bold text-lg mb-4">Recursos</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="faq.html" class="text-neutral-gray hover:text-accent-900 transition-colors">Perguntas Frequentes</a></li>
+                        <li><a href="contactos.html" class="text-neutral-gray hover:text-accent-900 transition-colors">Contactos</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-sans font-bold text-lg mb-4">Contacto</h4>
+                    <ul class="space-y-2 text-sm text-neutral-gray">
+                        <li><a href="tel:+351968145483" class="hover:text-accent-900 transition-colors">📞 (+351) 968 145 483</a></li>
+                        <li><a href="tel:+351964094546" class="hover:text-accent-900 transition-colors">📞 (+351) 964 094 546</a></li>
+                        <li><a href="mailto:ceaas.parchanas@gmail.com" class="hover:text-accent-900 transition-colors">✉️ ceaas.parchanas@gmail.com</a></li>
+                        <li>📍 Torrão, Alentejo, Portugal</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-neutral-gray pt-8 text-center text-sm text-neutral-gray">
+                <p>&copy; 2024 Herdade das Parchanas - CEAAS. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

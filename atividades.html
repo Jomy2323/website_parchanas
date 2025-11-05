@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Atividades na Herdade das Parchanas: aventura, desporto, contacto com animais, atividades criativas e muito mais no coração do Alentejo.">
+    <title>Atividades - Herdade das Parchanas</title>
+    <link rel="stylesheet" href="css/output.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header-sticky">
+        <nav class="container-custom px-4 py-4 flex items-center justify-between">
+            <a href="index.html" class="flex items-center">
+                <div class="w-12 h-12 bg-primary-900 rounded-lg flex items-center justify-center">
+                    <span class="text-accent-900 font-bold text-2xl">P</span>
+                </div>
+                <span class="ml-3 font-sans font-bold text-2xl text-primary-900">PARCHANAS</span>
+            </a>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="sobre-nos.html" class="font-sans font-semibold text-primary-900 hover:text-accent-900 transition-colors">Sobre Nós</a>
+                <a href="programas.html" class="font-sans font-semibold text-primary-900 hover:text-accent-900 transition-colors">Programas</a>
+                <a href="atividades.html" class="font-sans font-semibold text-accent-900 border-b-2 border-accent-900">Atividades</a>
+                <a href="instalacoes.html" class="font-sans font-semibold text-primary-900 hover:text-accent-900 transition-colors">Instalações</a>
+                <a href="contactos.html" class="font-sans font-semibold text-primary-900 hover:text-accent-900 transition-colors">Contactos</a>
+                <a href="inscricao.html" class="btn-primary">Inscrever Agora</a>
+            </div>
+            <button id="mobile-menu-toggle" class="md:hidden p-2 text-primary-900">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="mobile-menu-closed md:hidden bg-neutral-light transition-all duration-300">
+            <div class="container-custom px-4 py-4 flex flex-col gap-4">
+                <a href="sobre-nos.html" class="font-sans font-semibold text-primary-900 py-2">Sobre Nós</a>
+                <a href="programas.html" class="font-sans font-semibold text-primary-900 py-2">Programas</a>
+                <a href="atividades.html" class="font-sans font-semibold text-accent-900 py-2">Atividades</a>
+                <a href="instalacoes.html" class="font-sans font-semibold text-primary-900 py-2">Instalações</a>
+                <a href="contactos.html" class="font-sans font-semibold text-primary-900 py-2">Contactos</a>
+                <a href="inscricao.html" class="btn-primary w-full text-center">Inscrever Agora</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="section-primary py-20">
+        <div class="container-custom px-4 text-center">
+            <h1 class="text-6xl md:text-7xl font-sans font-bold text-neutral-white mb-6">As Nossas Atividades</h1>
+            <p class="text-xl md:text-2xl font-serif text-neutral-white max-w-4xl mx-auto">
+                Desde aventuras radicais no Rio Sado a momentos criativos na carpintaria - experiências únicas que criam memórias para toda a vida.
+            </p>
+        </div>
+    </section>
+
+    <!-- Atividades de Aventura -->
+    <section class="section-white">
+        <div class="container-custom px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-primary-900 mb-4">Atividades de Aventura</h2>
+                <p class="text-xl font-serif text-neutral-dark max-w-3xl mx-auto">
+                    Desafie o lado aventureiro com atividades emocionantes em plena natureza alentejana
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Canoagem e Travessias de Rio -->
+                <div class="card hover:shadow-xl transition-shadow">
+                    <div class="h-48 bg-gradient-to-br from-secondary-300 to-secondary-600 rounded-lg mb-4 flex items-center justify-center">
+                        <span class="text-7xl">🛶</span>
+                    </div>
+                    <h3 class="text-2xl font-sans font-bold text-primary-900 mb-3">Canoagem e Travessias de Rio</h3>
+                    <p class="text-neutral-dark leading-relaxed mb-4">
+                        Dirigimo-nos ao Rio Sado, que acompanha a herdade, rodeados por vegetação única. Atividades incluem:
+                    </p>
+                    <ul class="space-y-1 text-neutral-dark">
+                        <li>🚣 Canoagem</li>
+                        <li>🎢 Tirolesa</li>
+                        <li>🌳 Tarzan</li>
+                        <li>🤸 Barras paralelas</li>
+                    </ul>
+                </div>
+
+                <!-- Torre de Escalada -->
+                <div class="card hover:shadow-xl transition-shadow">
+                    <div class="h-48 bg-gradient-to-br from-accent-300 to-accent-600 rounded-lg mb-4 flex items-center justify-center">
+                        <span class="text-7xl">🧗</span>
+                    </div>
+                    <h3 class="text-2xl font-sans font-bold text-primary-900 mb-3">Torre de Escalada</h3>
+                    <p class="text-neutral-dark leading-relaxed mb-4">
+                        Desafie o seu lado aventureiro na nossa torre! Vista magnífica da paisagem alentejana do topo.
+                    </p>
+                    <ul class="space-y-1 text-neutral-dark">
+                        <li>🧗 Escalada</li>
+                        <li>🛝 Escorrega</li>
+                        <li>🪢 Rappel</li>
+                        <li>👁️ Vista panorâmica do Alentejo</li>
+                    </ul>
+                </div>
+
+                <!-- Campo de Tiro -->
+                <div class="card hover:shadow-xl transition-shadow">
+                    <div class="h-48 bg-gradient-to-br from-primary-300 to-primary-600 rounded-lg mb-4 flex items-center justify-center">
+                        <span class="text-7xl">🎯</span>
+                    </div>
+                    <h3 class="text-2xl font-sans font-bold text-primary-900 mb-3">Campo de Tiro</h3>
+                    <p class="text-neutral-dark leading-relaxed mb-4">
+                        Desenvolva concentração e precisão nas nossas áreas de tiro.
+                    </p>
+                    <ul class="space-y-1 text-neutral-dark">
+                        <li>🎯 Tiro ao alvo com pressão de ar</li>
+                        <li>🏹 Tiro com arco (archery)</li>
+                        <li>🎪 Supervisão especializada</li>
+                        <li>🏆 Competições amigáveis</li>
+                    </ul>
+                </div>
+
+                <!-- Bootcamp -->
+                <div class="card hover:shadow-xl transition-shadow">
+                    <div class="h-48 bg-gradient-to-br from-secondary-300 to-secondary-600 rounded-lg mb-4 flex items-center justify-center">
+                        <span class="text-7xl">💪</span>
+                    </div>
+                    <h3 class="text-2xl font-sans font-bold text-primary-900 mb-3">Bootcamp</h3>
+                    <p class="text-neutral-dark leading-relaxed mb-4">
+                        Campo cheio de obstáculos divertidos e desafiantes que desenvolvem competências psicomotoras.
+                    </p>
+                    <ul class="space-y-1 text-neutral-dark">
+                        <li>🏃 Circuito de obstáculos</li>
+                        <li>🤝 Espírito de grupo</li>
+                        <li>💪 Autoconfiança</li>
+                        <li>✨ Inspiração e superação</li>
+                    </ul>
+                </div>
+
+                <!-- Paintball -->
+                <div class="card hover:shadow-xl transition-shadow">
+                    <div class="h-48 bg-gradient-to-br from-accent-300 to-accent-600 rounded-lg mb-4 flex items-center justify-center">
+                        <span class="text-7xl">🎨</span>
+                    </div>
+                    <h3 class="text-2xl font-sans font-bold text-primary-900 mb-3">Paintball</h3>
+                    <p class="text-neutral-dark leading-relaxed mb-4">
+                        Jogo estratégico realizado num campo com obstáculos e esconderijos que promove espírito de equipa.
+                    </p>
+                    <ul class="space-y-1 text-neutral-dark">
+                        <li>🎯 Estratégia de equipa</li>
+                        <li>🏕️ Campo com obstáculos</li>
+                        <li>🤝 Trabalho colaborativo</li>
+                        <li>😄 Desafios divertidos</li>
+                    </ul>
+                </div>
+
+                <!-- BTT (Mountain Biking) -->
+                <div class="card hover:shadow-xl transition-shadow">
+                    <div class="h-48 bg-gradient-to-br from-primary-300 to-primary-600 rounded-lg mb-4 flex items-center justify-center">
+                        <span class="text-7xl">🚴</span>
+                    </div>
+                    <h3 class="text-2xl font-sans font-bold text-primary-900 mb-3">BTT (Mountain Biking)</h3>
+                    <p class="text-neutral-dark leading-relaxed mb-4">
+                        Passeios de bicicleta pela Herdade das Parchanas e herdades vizinhas no meio da paisagem paradisíaca alentejana.
+                    </p>
+                    <ul class="space-y-1 text-neutral-dark">
+                        <li>🚵 Percursos pela herdade</li>
+                        <li>🌳 Paisagem alentejana</li>
+                        <li>🦌 Animais e seres vivos</li>
+                        <li>🌾 Campos e sobreirais</li>
+                    </ul>
+                </div>
+
+                <!-- Orientação -->
+                <div class="card hover:shadow-xl transition-shadow">
+                    <div class="h-48 bg-gradient-to-br from-secondary-300 to-secondary-600 rounded-lg mb-4 flex items-center justify-center">
+                        <span class="text-7xl">🧭</span>
+                    </div>
+                    <h3 class="text-2xl font-sans font-bold text-primary-900 mb-3">Orientação</h3>
+                    <p class="text-neutral-dark leading-relaxed mb-4">
+                        Desporto que exercita mente e corpo. Seguir um percurso específico usando mapa e bússola.
+                    </p>
+                    <ul class="space-y-1 text-neutral-dark">
+                        <li>🗺️ Utilização de mapa e bússola</li>
+                        <li>📍 "Picar" pontos pela herdade</li>
+                        <li>🏆 Vencedor: menor tempo + maior pontuação</li>
+                        <li>👨‍👩‍👧‍👦 Atividade por famílias</li>
+                    </ul>
+                </div>
+
+                <!-- Equitação -->
+                <div class="card hover:shadow-xl transition-shadow">
+                    <div class="h-48 bg-gradient-to-br from-accent-300 to-accent-600 rounded-lg mb-4 flex items-center justify-center">
+                        <span class="text-7xl">🐴</span>
+                    </div>
+                    <h3 class="text-2xl font-sans font-bold text-primary-900 mb-3">Equitação</h3>
+                    <p class="text-neutral-dark leading-relaxed mb-4">
+                        Experiência de contacto direto com cavalos no nosso picadeiro e cavalariça.
+                    </p>
+                    <ul class="space-y-1 text-neutral-dark">
+                        <li>🐎 Passeios a cavalo</li>
+                        <li>🏇 Iniciação à equitação</li>
+                        <li>💚 Alimentar os cavalos</li>
+                        <li>🏡 Visita à cavalariça</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Atividades Criativas e Educacionais -->
+    <section class="section-gray">
+        <div class="container-custom px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-primary-900 mb-4">Atividades Criativas e Educacionais</h2>
+                <p class="text-xl font-serif text-neutral-dark max-w-3xl mx-auto">
+                    Expandir a imaginação e desenvolver novas competências
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+
+                <!-- Fabrico de Pão e Pizzas -->
+                <div class="card bg-accent-50">
+                    <div class="flex items-start gap-4 mb-4">
+                        <span class="text-5xl">🍞</span>
+                        <div>
+                            <h3 class="text-2xl font-sans font-bold text-primary-900 mb-2">Fabrico de Pão e Pizzas</h3>
+                            <p class="text-neutral-dark leading-relaxed">
+                                Como sabem, o pão alentejano é uma das grandes iguarias da gastronomia portuguesa e está presente em todas as nossas refeições na Herdade. Assim, para expandir o conhecimento dos nossos jovens e proporcionar-lhes experiências diferenciadas, fazemos pão em forno a lenha. Mas não paramos por aí... a pizza também está incluída! Cada participante faz a sua própria, com o formato que quer e os ingredientes favoritos.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carpintaria -->
+                <div class="card bg-secondary-50">
+                    <div class="flex items-start gap-4 mb-4">
+                        <span class="text-5xl">🪚</span>
+                        <div>
+                            <h3 class="text-2xl font-sans font-bold text-primary-900 mb-2">Carpintaria</h3>
+                            <p class="text-neutral-dark leading-relaxed">
+                                Fazer presentes e recordações em madeira. Técnicas incluem desenho, lixar e pintar. Leva para casa algo feito pelas tuas próprias mãos!
+                            </p>
+                            <ul class="space-y-1 text-neutral-dark mt-3">
+                                <li>✓ Trabalho com madeira</li>
+                                <li>✓ Desenho e design</li>
+                                <li>✓ Lixar e pintar</li>
+                                <li>✓ Recordações personalizadas</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contacto com Animais -->
+                <div class="card bg-primary-50">
+                    <div class="flex items-start gap-4 mb-4">
+                        <span class="text-5xl">🐐</span>
+                        <div>
+                            <h3 class="text-2xl font-sans font-bold text-primary-900 mb-2">Contacto com Animais</h3>
+                            <p class="text-neutral-dark leading-relaxed mb-3">
+                                Alimentar e cuidar dos nossos animais - uma experiência enriquecedora para todas as idades.
+                            </p>
+                            <ul class="space-y-1 text-neutral-dark">
+                                <li>🐐 Alimentar as cabras</li>
+                                <li>🐴 Cuidar dos cavalos</li>
+                                <li>🐷 Visitar os porcos</li>
+                                <li>🐔 Parque de animais</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Horta e Agricultura -->
+                <div class="card bg-accent-50">
+                    <div class="flex items-start gap-4 mb-4">
+                        <span class="text-5xl">🌱</span>
+                        <div>
+                            <h3 class="text-2xl font-sans font-bold text-primary-900 mb-2">Horta e Agricultura</h3>
+                            <p class="text-neutral-dark leading-relaxed">
+                                Aprender sobre a origem dos alimentos e processos de produção através de participação direta em atividades agrícolas.
+                            </p>
+                            <ul class="space-y-1 text-neutral-dark mt-3">
+                                <li>✓ Plantar e cuidar de árvores de fruto</li>
+                                <li>✓ Trabalhar na horta</li>
+                                <li>✓ Compreender ciclos da natureza</li>
+                                <li>✓ Educação ambiental prática</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Atividades Diárias e Desportos -->
+    <section class="section-white">
+        <div class="container-custom px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-primary-900 mb-4">Atividades Diárias e Desportos</h2>
+                <p class="text-xl font-serif text-neutral-dark max-w-3xl mx-auto">
+                    Diversão garantida todos os dias com jogos, desportos e competições
+                </p>
+            </div>
+
+            <div class="max-w-6xl mx-auto">
+
+                <!-- Torneios Diários -->
+                <div class="card bg-accent-50 mb-8">
+                    <div class="text-center mb-6">
+                        <span class="text-6xl mb-4 block">🏆</span>
+                        <h3 class="text-3xl font-sans font-bold text-primary-900 mb-3">Torneios Diários</h3>
+                        <p class="text-lg text-neutral-dark max-w-2xl mx-auto">
+                            <strong>Horário:</strong> 13:00 - 14:00 (hora do almoço)<br>
+                            Os vencedores são anunciados no final da semana com cerimónia de entrega de prémios!
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <div class="text-center p-4 bg-neutral-white rounded-lg">
+                            <span class="text-3xl block mb-2">🏓</span>
+                            <p class="font-sans font-bold text-primary-900">Ping-Pong</p>
+                        </div>
+                        <div class="text-center p-4 bg-neutral-white rounded-lg">
+                            <span class="text-3xl block mb-2">⚽</span>
+                            <p class="font-sans font-bold text-primary-900">Matraquilhos</p>
+                        </div>
+                        <div class="text-center p-4 bg-neutral-white rounded-lg">
+                            <span class="text-3xl block mb-2">♟️</span>
+                            <p class="font-sans font-bold text-primary-900">Damas</p>
+                        </div>
+                        <div class="text-center p-4 bg-neutral-white rounded-lg">
+                            <span class="text-3xl block mb-2">♜</span>
+                            <p class="font-sans font-bold text-primary-900">Xadrez</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Desportos de Equipa -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                    <div class="card text-center">
+                        <span class="text-5xl mb-3 block">⚽</span>
+                        <h4 class="text-xl font-sans font-bold text-primary-900">Futebol</h4>
+                    </div>
+                    <div class="card text-center">
+                        <span class="text-5xl mb-3 block">🏐</span>
+                        <h4 class="text-xl font-sans font-bold text-primary-900">Voleibol de Praia</h4>
+                    </div>
+                    <div class="card text-center">
+                        <span class="text-5xl mb-3 block">🎾</span>
+                        <h4 class="text-xl font-sans font-bold text-primary-900">Beach Tennis</h4>
+                    </div>
+                    <div class="card text-center">
+                        <span class="text-5xl mb-3 block">🏉</span>
+                        <h4 class="text-xl font-sans font-bold text-primary-900">Tag Rugby</h4>
+                    </div>
+                </div>
+
+                <!-- Outras Atividades -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="card bg-secondary-50 text-center">
+                        <span class="text-5xl mb-3 block">🏊</span>
+                        <h4 class="text-xl font-sans font-bold text-primary-900 mb-2">Piscina e Jogos Aquáticos</h4>
+                        <p class="text-neutral-dark">Diversão refrescante durante os dias quentes</p>
+                    </div>
+                    <div class="card bg-primary-50 text-center">
+                        <span class="text-5xl mb-3 block">🌅</span>
+                        <h4 class="text-xl font-sans font-bold text-primary-900 mb-2">"Pores do Sol"</h4>
+                        <p class="text-neutral-dark">Desafios de equipa de forma dinâmica, estimulante e divertida</p>
+                    </div>
+                    <div class="card bg-accent-50 text-center">
+                        <span class="text-5xl mb-3 block">🎭</span>
+                        <h4 class="text-xl font-sans font-bold text-primary-900 mb-2">Jogos Tradicionais</h4>
+                        <p class="text-neutral-dark">Várias atividades recreativas tradicionais portuguesas</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Atividades Noturnas -->
+    <section class="section-primary">
+        <div class="container-custom px-4">
+            <div class="text-center max-w-4xl mx-auto">
+                <span class="text-6xl mb-4 block">🌙</span>
+                <h2 class="text-neutral-white mb-6">Atividades Noturnas Especiais</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+                    <div class="bg-neutral-white bg-opacity-10 backdrop-blur-sm p-6 rounded-lg">
+                        <h3 class="text-2xl font-sans font-bold text-accent-900 mb-3">Jogos Noturnos</h3>
+                        <p class="text-lg text-neutral-white leading-relaxed">
+                            Após o jantar, realizamos jogos pela herdade que promovem união e espírito de equipa com muita diversão!
+                        </p>
+                    </div>
+                    <div class="bg-neutral-white bg-opacity-10 backdrop-blur-sm p-6 rounded-lg">
+                        <h3 class="text-2xl font-sans font-bold text-accent-900 mb-3">Jantares Temáticos</h3>
+                        <p class="text-lg text-neutral-white leading-relaxed">
+                            Todas as noites com temas diferentes! Exploramos criatividade e imaginação em atividades de grupo variadas.
+                        </p>
+                    </div>
+                </div>
+                <div class="mt-8 bg-accent-900 text-neutral-black p-6 rounded-lg">
+                    <h3 class="text-2xl font-sans font-bold mb-2">🎉 Jantar de Gala</h3>
+                    <p class="text-lg">
+                        Todas as sextas-feiras! Evento especial onde todos se vestem adequadamente (não precisa ser muito formal). Um momento inesquecível!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section-white">
+        <div class="container-custom px-4 text-center">
+            <h2 class="text-primary-900 mb-6">Pronto Para Viver Estas Aventuras?</h2>
+            <p class="text-xl font-serif text-neutral-dark mb-8 max-w-3xl mx-auto">
+                Inscreva-se nas nossas Colónias de Férias e experimente todas estas atividades incríveis no coração do Alentejo!
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="inscricao.html" class="btn-primary text-xl px-12 py-5">Inscrever Agora</a>
+                <a href="programas.html" class="btn-secondary text-xl px-12 py-5">Ver Programas</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-neutral-black text-neutral-white py-12">
+        <div class="container-custom px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-accent-900 rounded-lg flex items-center justify-center">
+                            <span class="text-neutral-black font-bold text-xl">P</span>
+                        </div>
+                        <span class="ml-2 font-sans font-bold text-xl">PARCHANAS</span>
+                    </div>
+                    <p class="text-neutral-gray text-sm">A criar amizades para toda a vida desde 1989.</p>
+                </div>
+                <div>
+                    <h4 class="font-sans font-bold text-lg mb-4">Links Rápidos</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="sobre-nos.html" class="text-neutral-gray hover:text-accent-900 transition-colors">Sobre Nós</a></li>
+                        <li><a href="programas.html" class="text-neutral-gray hover:text-accent-900 transition-colors">Programas</a></li>
+                        <li><a href="atividades.html" class="text-neutral-gray hover:text-accent-900 transition-colors">Atividades</a></li>
+                        <li><a href="instalacoes.html" class="text-neutral-gray hover:text-accent-900 transition-colors">Instalações</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-sans font-bold text-lg mb-4">Recursos</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="faq.html" class="text-neutral-gray hover:text-accent-900 transition-colors">Perguntas Frequentes</a></li>
+                        <li><a href="contactos.html" class="text-neutral-gray hover:text-accent-900 transition-colors">Contactos</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-sans font-bold text-lg mb-4">Contacto</h4>
+                    <ul class="space-y-2 text-sm text-neutral-gray">
+                        <li><a href="tel:+351968145483" class="hover:text-accent-900 transition-colors">📞 (+351) 968 145 483</a></li>
+                        <li><a href="tel:+351964094546" class="hover:text-accent-900 transition-colors">📞 (+351) 964 094 546</a></li>
+                        <li><a href="mailto:ceaas.parchanas@gmail.com" class="hover:text-accent-900 transition-colors">✉️ ceaas.parchanas@gmail.com</a></li>
+                        <li>📍 Torrão, Alentejo, Portugal</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-neutral-gray pt-8 text-center text-sm text-neutral-gray">
+                <p>&copy; 2024 Herdade das Parchanas - CEAAS. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
