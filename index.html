@@ -4,39 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Herdade das Parchanas - Colónias de férias e campo de aventuras no Alentejo desde 1989. Para crianças dos 6 aos 17 anos, junto ao Rio Sado.">
-    <meta name="keywords" content="colónias de férias, campo de férias, parchanas, alentejo, rio sado, crianças, aventura, natureza">
     <title>Herdade das Parchanas - Colónias de Férias no Alentejo desde 1989</title>
-
-    <!-- Tailwind CSS Output -->
     <link rel="stylesheet" href="css/output.css">
-
-    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-</head>
-<body>
+    <style>
+        /* Animações personalizadas */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-    <!-- Header Navigation - Sticky -->
-    <header class="header-sticky">
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .animate-fadeInUp {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .gradient-overlay {
+            background: linear-gradient(135deg, rgba(45, 80, 22, 0.9) 0%, rgba(13, 115, 119, 0.85) 100%);
+        }
+
+        .image-reveal {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .image-reveal img {
+            transition: transform 0.6s ease;
+        }
+
+        .image-reveal:hover img {
+            transform: scale(1.1);
+        }
+
+        .stat-card {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.95);
+        }
+    </style>
+</head>
+<body class="bg-neutral-white">
+
+    <!-- Header Navigation - Sticky with blur -->
+    <header class="header-sticky backdrop-blur-md bg-neutral-white/90">
         <nav class="container-custom px-4 py-4 flex items-center justify-between">
-            <!-- Logo -->
-            <a href="index.html" class="flex items-center">
-                <div class="w-12 h-12 bg-primary-900 rounded-lg flex items-center justify-center">
-                    <span class="text-accent-400 font-bold text-2xl">P</span>
+            <a href="index.html" class="flex items-center group">
+                <div class="w-12 h-12 bg-primary-900 rounded-lg flex items-center justify-center transition-transform group-hover:scale-110">
+                    <span class="text-accent-900 font-bold text-2xl">P</span>
                 </div>
                 <span class="ml-3 font-sans font-bold text-2xl text-primary-900">PARCHANAS</span>
             </a>
 
-            <!-- Desktop Navigation -->
             <div class="hidden md:flex items-center gap-8">
-                <a href="sobre-nos.html" class="font-sans font-semibold text-primary-900 hover:text-accent-600 transition-colors">Sobre Nós</a>
-                <a href="programas.html" class="font-sans font-semibold text-primary-900 hover:text-accent-600 transition-colors">Programas</a>
-                <a href="atividades.html" class="font-sans font-semibold text-primary-900 hover:text-accent-600 transition-colors">Atividades</a>
-                <a href="instalacoes.html" class="font-sans font-semibold text-primary-900 hover:text-accent-600 transition-colors">Instalações</a>
-                <a href="contactos.html" class="font-sans font-semibold text-primary-900 hover:text-accent-600 transition-colors">Contactos</a>
-                <a href="inscricao.html" class="btn-primary">Inscrever Agora</a>
+                <a href="sobre-nos.html" class="font-sans font-semibold text-primary-900 hover:text-accent-900 transition-all hover:scale-105">Sobre Nós</a>
+                <a href="programas.html" class="font-sans font-semibold text-primary-900 hover:text-accent-900 transition-all hover:scale-105">Programas</a>
+                <a href="atividades.html" class="font-sans font-semibold text-primary-900 hover:text-accent-900 transition-all hover:scale-105">Atividades</a>
+                <a href="instalacoes.html" class="font-sans font-semibold text-primary-900 hover:text-accent-900 transition-all hover:scale-105">Instalações</a>
+                <a href="contactos.html" class="font-sans font-semibold text-primary-900 hover:text-accent-900 transition-all hover:scale-105">Contactos</a>
+                <a href="inscricao.html" class="btn-primary hover:scale-105 transition-transform">Inscrever Agora</a>
             </div>
 
-            <!-- Mobile Menu Button -->
             <button id="mobile-menu-toggle" class="md:hidden p-2 text-primary-900">
                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -44,7 +84,6 @@
             </button>
         </nav>
 
-        <!-- Mobile Navigation Menu -->
         <div id="mobile-menu" class="mobile-menu-closed md:hidden bg-neutral-light transition-all duration-300">
             <div class="container-custom px-4 py-4 flex flex-col gap-4">
                 <a href="sobre-nos.html" class="font-sans font-semibold text-primary-900 py-2">Sobre Nós</a>
@@ -57,319 +96,435 @@
         </div>
     </header>
 
-    <!-- Hero Section - Full Bleed -->
-    <section class="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
-        <!-- Background Image Placeholder -->
+    <!-- Hero Section - Full Screen with Background Image -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <!-- Background Image with Overlay -->
         <div class="absolute inset-0 z-0">
-            <div class="w-full h-full bg-gradient-to-br from-secondary-700 to-primary-800 flex items-center justify-center">
-                <div class="text-neutral-white text-center p-8">
-                    <svg class="w-32 h-32 mx-auto mb-4 opacity-50" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"/>
-                    </svg>
-                    <p class="text-lg opacity-75">[Vídeo/Imagem Hero - Rio Sado, Cegonhas, Crianças em Atividades]</p>
-                    <p class="text-sm mt-2 opacity-60">Alentejo, aventura, natureza</p>
-                </div>
-            </div>
-            <div class="absolute inset-0 gradient-overlay opacity-60"></div>
+            <img src="https://images.unsplash.com/photo-1504280390367-361c9d9f38f4?w=1600&h=900&fit=crop"
+                 alt="Crianças a brincar na natureza"
+                 class="w-full h-full object-cover">
+            <div class="absolute inset-0 gradient-overlay"></div>
         </div>
 
         <!-- Hero Content -->
-        <div class="relative z-10 container-custom px-4 text-center text-neutral-white">
-            <h1 class="text-5xl md:text-7xl font-sans font-bold text-neutral-white text-shadow mb-6 fade-in-up">
-                Bem-vindo à Herdade das Parchanas
+        <div class="relative z-10 container-custom px-4 text-center">
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-sans font-bold text-neutral-white mb-6 animate-fadeInUp">
+                Bem-vindo à<br>Herdade das Parchanas
             </h1>
-            <p class="text-xl md:text-2xl font-serif mb-8 text-shadow max-w-3xl mx-auto fade-in-up">
-                Experiências inesquecíveis para crianças dos 6 aos 17 anos no coração do Alentejo, junto ao Rio Sado, desde 1989.
+            <p class="text-xl md:text-3xl font-serif text-neutral-white max-w-4xl mx-auto mb-8 animate-fadeInUp" style="animation-delay: 0.2s;">
+                Experiências inesquecíveis no coração do Alentejo desde 1989
             </p>
-
-            <!-- Dual CTAs -->
-            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center fade-in-up">
-                <a href="inscricao.html" class="btn-primary text-xl px-12 py-5">Inscrever Agora</a>
-                <a href="programas.html" class="btn-secondary text-xl px-12 py-5">Ver Programas</a>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fadeInUp" style="animation-delay: 0.4s;">
+                <a href="inscricao.html" class="btn-primary text-xl px-12 py-5 hover:scale-110 transition-transform shadow-2xl">
+                    Inscrever Agora
+                </a>
+                <a href="sobre-nos.html" class="bg-neutral-white text-primary-900 font-sans font-bold px-12 py-5 rounded-lg hover:scale-110 transition-transform shadow-2xl">
+                    Saber Mais
+                </a>
             </div>
-        </div>
 
-        <!-- Scroll Indicator -->
-        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
-            <svg class="w-8 h-8 text-neutral-white animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-            </svg>
+            <!-- Scroll Indicator -->
+            <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-float">
+                <svg class="w-8 h-8 text-neutral-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+            </div>
         </div>
     </section>
 
-    <!-- Welcome Message -->
-    <section class="section-white">
+    <!-- Stats Bar -->
+    <section class="py-12 bg-primary-900 text-neutral-white">
         <div class="container-custom px-4">
-            <div class="max-w-4xl mx-auto text-center">
-                <h2 class="text-4xl md:text-5xl font-sans font-bold text-primary-900 mb-6">Uma Segunda Casa Desde 1989</h2>
-                <p class="text-xl font-serif text-neutral-dark leading-relaxed mb-8">
-                    Aqui pode ver e conhecer um pouco da nossa Herdade, que proporciona experiências absolutamente memoráveis para crianças entre os 6 e os 17 anos. Os dias e semanas passados aqui são preenchidos com alegria, aventuras, novas amizades e muitas memórias inesquecíveis!
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Os Quatro Pilares -->
-    <section class="section-gray">
-        <div class="container-custom px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl md:text-5xl font-sans font-bold text-primary-900 mb-4">Os Quatro Pilares das Parchanas</h2>
-                <p class="text-xl font-serif text-neutral-dark max-w-3xl mx-auto">
-                    Os valores fundamentais que guiam todas as nossas atividades e experiências.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Pilar 1: Autonomia e Autoconfiança -->
-                <div class="card">
-                    <div class="flex items-start gap-4 mb-4">
-                        <div class="flex-shrink-0 w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center">
-                            <svg class="w-8 h-8 text-primary-700" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3z"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <h3 class="text-2xl font-sans font-bold text-primary-900 mb-2">Autonomia e Autoconfiança</h3>
-                        </div>
-                    </div>
-                    <p class="text-lg font-serif text-neutral-dark leading-relaxed">
-                        Nas Parchanas proporcionamos experiências diferenciadas através das nossas atividades, fazendo com que os jovens adquiram e desenvolvam sentido de independência e determinação.
-                    </p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="stat-card p-6 rounded-xl">
+                    <div class="text-5xl font-bold text-primary-900 mb-2">35+</div>
+                    <div class="text-neutral-dark font-semibold">Anos de Experiência</div>
                 </div>
-
-                <!-- Pilar 2: Amizade e Partilha -->
-                <div class="card">
-                    <div class="flex items-start gap-4 mb-4">
-                        <div class="flex-shrink-0 w-16 h-16 bg-accent-100 rounded-full flex items-center justify-center">
-                            <svg class="w-8 h-8 text-accent-700" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <h3 class="text-2xl font-sans font-bold text-primary-900 mb-2">Amizade e Partilha</h3>
-                        </div>
-                    </div>
-                    <p class="text-lg font-serif text-neutral-dark leading-relaxed">
-                        Nas Parchanas partilhamos muitos sorrisos e bons momentos, o que nos faz criar amizades duradouras que levamos connosco para toda a vida.
-                    </p>
+                <div class="stat-card p-6 rounded-xl">
+                    <div class="text-5xl font-bold text-secondary-800 mb-2">6-17</div>
+                    <div class="text-neutral-dark font-semibold">Idades Aceites</div>
                 </div>
-
-                <!-- Pilar 3: Companheirismo e Empatia -->
-                <div class="card">
-                    <div class="flex items-start gap-4 mb-4">
-                        <div class="flex-shrink-0 w-16 h-16 bg-secondary-100 rounded-full flex items-center justify-center">
-                            <svg class="w-8 h-8 text-secondary-700" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <h3 class="text-2xl font-sans font-bold text-primary-900 mb-2">Companheirismo e Empatia</h3>
-                        </div>
-                    </div>
-                    <p class="text-lg font-serif text-neutral-dark leading-relaxed">
-                        Nas Parchanas superamos muitos desafios em conjunto, trabalhamos em equipa e ajudamo-nos uns aos outros.
-                    </p>
+                <div class="stat-card p-6 rounded-xl">
+                    <div class="text-5xl font-bold text-accent-900 mb-2">50</div>
+                    <div class="text-neutral-dark font-semibold">Hectares de Natureza</div>
                 </div>
-
-                <!-- Pilar 4: Criatividade e Respeito -->
-                <div class="card">
-                    <div class="flex items-start gap-4 mb-4">
-                        <div class="flex-shrink-0 w-16 h-16 bg-accent-100 rounded-full flex items-center justify-center">
-                            <svg class="w-8 h-8 text-accent-700" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM5 10a1 1 0 01-1 1H3a1 1 0 110-2h1a1 1 0 011 1zM8 16v-1h4v1a2 2 0 11-4 0zM12 14c.015-.34.208-.646.477-.859a4 4 0 10-4.954 0c.27.213.462.519.476.859h4.002z"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <h3 class="text-2xl font-sans font-bold text-primary-900 mb-2">Criatividade e Respeito</h3>
-                        </div>
-                    </div>
-                    <p class="text-lg font-serif text-neutral-dark leading-relaxed">
-                        Nas Parchanas podemos expandir a nossa imaginação e somos muito criativos. Aprendemos a respeitar as diferenças de cada um e todos crescemos em conjunto.
-                    </p>
+                <div class="stat-card p-6 rounded-xl">
+                    <div class="text-5xl font-bold text-primary-900 mb-2">30+</div>
+                    <div class="text-neutral-dark font-semibold">Atividades Diferentes</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Localização e Ambiente -->
-    <section class="section-white">
+    <!-- About Section - Split Image/Text -->
+    <section class="py-20">
         <div class="container-custom px-4">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <!-- Texto -->
-                <div>
-                    <h2 class="text-4xl md:text-5xl font-sans font-bold text-primary-900 mb-6">No Coração do Alentejo</h2>
-                    <div class="space-y-4 text-lg font-serif text-neutral-dark leading-relaxed">
-                        <p>
-                            A Herdade das Parchanas situa-se em <strong>Torrão, Alentejo</strong>, nas margens do <strong>Rio Sado</strong>, numa zona integrada na Reserva Natural do Estuário do Sado.
-                        </p>
-                        <p>
-                            Rodeados por aproximadamente <strong>50 hectares de terreno irrigado</strong> onde se cultiva arroz, o habitat mediterrânico típico inclui sobreiros, olivais, campos cultivados, mato, esteva e zonas ribeirinhas.
-                        </p>
-                        <p>
-                            A paisagem paradisíaca do campo alentejano é enriquecida pela presença de <strong>cegonhas</strong> (com envergadura até 2,15 metros!), pega-azul, garças-cinzentas, javalis e lontras.
-                        </p>
-                    </div>
-                    <a href="instalacoes.html" class="btn-tertiary inline-flex items-center gap-2 mt-6">
-                        Conhecer as Instalações
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                        </svg>
-                    </a>
+                <!-- Image -->
+                <div class="image-reveal rounded-2xl overflow-hidden shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&h=600&fit=crop"
+                         alt="Natureza Alentejana"
+                         class="w-full h-[500px] object-cover">
                 </div>
 
-                <!-- Imagem/Placeholder -->
-                <div class="bg-secondary-100 rounded-2xl h-96 flex items-center justify-center">
-                    <div class="text-center p-8">
-                        <span class="text-8xl mb-4 block">🦩</span>
-                        <p class="text-secondary-800 font-sans font-semibold">[Imagem: Rio Sado, Cegonhas, Paisagem Alentejo]</p>
-                    </div>
+                <!-- Text Content -->
+                <div>
+                    <span class="text-accent-900 font-sans font-bold text-sm uppercase tracking-wider">Desde 1989</span>
+                    <h2 class="text-5xl font-sans font-bold text-primary-900 mt-4 mb-6">
+                        Uma Segunda Casa no Coração do Alentejo
+                    </h2>
+                    <p class="text-xl text-neutral-dark leading-relaxed mb-6 font-serif">
+                        Situada nas margens do Rio Sado, na Reserva Natural do Estuário do Sado, a Herdade das Parchanas proporciona experiências absolutamente memoráveis a crianças e jovens dos 6 aos 17 anos.
+                    </p>
+                    <p class="text-lg text-neutral-dark leading-relaxed mb-8 font-serif">
+                        50 hectares de natureza pristina, arrozais, sobreirais e um ecossistema único onde as cegonhas voam com 2,15 metros de envergadura. Aqui, cada dia é uma aventura e cada noite uma nova amizade.
+                    </p>
+                    <a href="sobre-nos.html" class="btn-primary inline-block hover:scale-105 transition-transform">
+                        Conhecer a Nossa História
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Programas Highlights -->
-    <section class="section-gray">
-        <div class="container-custom px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl md:text-5xl font-sans font-bold text-primary-900 mb-4">Os Nossos Programas</h2>
-                <p class="text-xl font-serif text-neutral-dark max-w-3xl mx-auto">
-                    Colónias de férias, programas escolares e team building para todas as idades.
+    <!-- Os Quatro Pilares - Visual Cards -->
+    <section class="py-20 bg-gradient-to-br from-primary-900 to-secondary-800 relative overflow-hidden">
+        <!-- Decorative Elements -->
+        <div class="absolute top-0 right-0 w-64 h-64 bg-accent-900 rounded-full opacity-10 -translate-y-1/2 translate-x-1/2"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-accent-900 rounded-full opacity-10 translate-y-1/2 -translate-x-1/2"></div>
+
+        <div class="container-custom px-4 relative z-10">
+            <div class="text-center mb-16">
+                <span class="text-accent-900 font-sans font-bold text-sm uppercase tracking-wider">Os Nossos Valores</span>
+                <h2 class="text-5xl font-sans font-bold text-neutral-white mt-4 mb-6">
+                    Os Quatro Pilares das Parchanas
+                </h2>
+                <p class="text-xl text-neutral-white/90 max-w-3xl mx-auto font-serif">
+                    Os valores que orientam tudo o que fazemos desde 1989
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-                <!-- Colónias de Férias -->
-                <div class="card hover:scale-105 transition-transform duration-300">
-                    <div class="h-48 bg-gradient-to-br from-primary-200 to-primary-400 rounded-lg mb-4 flex items-center justify-center">
-                        <span class="text-6xl">🏕️</span>
-                    </div>
-                    <h3 class="text-2xl font-sans font-bold text-primary-900 mb-2">Colónias de Férias</h3>
-                    <p class="text-lg font-sans font-semibold text-accent-700 mb-3">6-17 anos</p>
-                    <p class="text-neutral-dark mb-4">
-                        Natal, Páscoa e Verão. Programas de 7 ou 14 dias repletos de aventura, amizades e descoberta da natureza.
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Pilar 1 -->
+                <div class="group relative bg-neutral-white rounded-2xl p-8 hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl cursor-pointer">
+                    <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-accent-900 to-primary-600 rounded-t-2xl"></div>
+                    <div class="text-6xl mb-6 text-center group-hover:scale-110 transition-transform">💪</div>
+                    <h3 class="text-2xl font-sans font-bold text-primary-900 mb-4 text-center">Autonomia e Autoconfiança</h3>
+                    <p class="text-neutral-dark font-serif leading-relaxed text-center">
+                        Proporcionamos experiências que desenvolvem independência e determinação
                     </p>
-                    <a href="programas.html#colonias" class="btn-tertiary">Saber Mais →</a>
+                </div>
+
+                <!-- Pilar 2 -->
+                <div class="group relative bg-neutral-white rounded-2xl p-8 hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl cursor-pointer">
+                    <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-secondary-800 to-accent-600 rounded-t-2xl"></div>
+                    <div class="text-6xl mb-6 text-center group-hover:scale-110 transition-transform">🤝</div>
+                    <h3 class="text-2xl font-sans font-bold text-primary-900 mb-4 text-center">Amizade e Partilha</h3>
+                    <p class="text-neutral-dark font-serif leading-relaxed text-center">
+                        Criamos amizades duradouras que levamos connosco para a vida toda
+                    </p>
+                </div>
+
+                <!-- Pilar 3 -->
+                <div class="group relative bg-neutral-white rounded-2xl p-8 hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl cursor-pointer">
+                    <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-primary-600 to-secondary-800 rounded-t-2xl"></div>
+                    <div class="text-6xl mb-6 text-center group-hover:scale-110 transition-transform">❤️</div>
+                    <h3 class="text-2xl font-sans font-bold text-primary-900 mb-4 text-center">Companheirismo e Empatia</h3>
+                    <p class="text-neutral-dark font-serif leading-relaxed text-center">
+                        Superamos desafios juntos e ajudamo-nos uns aos outros
+                    </p>
+                </div>
+
+                <!-- Pilar 4 -->
+                <div class="group relative bg-neutral-white rounded-2xl p-8 hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl cursor-pointer">
+                    <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-accent-600 to-primary-900 rounded-t-2xl"></div>
+                    <div class="text-6xl mb-6 text-center group-hover:scale-110 transition-transform">🎨</div>
+                    <h3 class="text-2xl font-sans font-bold text-primary-900 mb-4 text-center">Criatividade e Respeito</h3>
+                    <p class="text-neutral-dark font-serif leading-relaxed text-center">
+                        Expandimos a imaginação e respeitamos as diferenças
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programas Section - Visual Cards with Images -->
+    <section class="py-20">
+        <div class="container-custom px-4">
+            <div class="text-center mb-16">
+                <span class="text-accent-900 font-sans font-bold text-sm uppercase tracking-wider">O Que Oferecemos</span>
+                <h2 class="text-5xl font-sans font-bold text-primary-900 mt-4 mb-6">
+                    Os Nossos Programas
+                </h2>
+                <p class="text-xl text-neutral-dark max-w-3xl mx-auto font-serif">
+                    Experiências únicas para crianças, escolas e empresas
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Colónias -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
+                    <div class="image-reveal">
+                        <img src="https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?w=600&h=800&fit=crop"
+                             alt="Colónias de Férias"
+                             class="w-full h-80 object-cover">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary-900 via-primary-900/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-8 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                        <h3 class="text-3xl font-sans font-bold mb-3">Colónias de Férias</h3>
+                        <p class="text-lg mb-4 font-serif opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
+                            Para crianças dos 6 aos 17 anos. Natal, Páscoa e Verão. 1 ou 2 semanas de aventura.
+                        </p>
+                        <a href="programas.html" class="btn-primary inline-block opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-200">
+                            Saber Mais
+                        </a>
+                    </div>
                 </div>
 
                 <!-- Programas Escolares -->
-                <div class="card hover:scale-105 transition-transform duration-300">
-                    <div class="h-48 bg-gradient-to-br from-secondary-200 to-secondary-400 rounded-lg mb-4 flex items-center justify-center">
-                        <span class="text-6xl">📚</span>
+                <div class="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
+                    <div class="image-reveal">
+                        <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=600&h=800&fit=crop"
+                             alt="Programas Escolares"
+                             class="w-full h-80 object-cover">
                     </div>
-                    <h3 class="text-2xl font-sans font-bold text-primary-900 mb-2">Programas Escolares</h3>
-                    <p class="text-lg font-sans font-semibold text-accent-700 mb-3">Todas as idades</p>
-                    <p class="text-neutral-dark mb-4">
-                        Matemática no Campo, Energias Renováveis, Nidificação das Cegonhas e muito mais. Aprendizagem complementar diferenciada.
-                    </p>
-                    <a href="programas.html#escolares" class="btn-tertiary">Saber Mais →</a>
+                    <div class="absolute inset-0 bg-gradient-to-t from-secondary-800 via-secondary-800/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-8 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                        <h3 class="text-3xl font-sans font-bold mb-3">Programas Escolares</h3>
+                        <p class="text-lg mb-4 font-serif opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
+                            8 programas pedagógicos especializados. De 1 a 3 dias. Matemática, Ambiente, Cegonhas e mais.
+                        </p>
+                        <a href="programas.html" class="btn-secondary inline-block opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-200">
+                            Saber Mais
+                        </a>
+                    </div>
                 </div>
 
                 <!-- Team Building -->
-                <div class="card hover:scale-105 transition-transform duration-300">
-                    <div class="h-48 bg-gradient-to-br from-accent-200 to-accent-400 rounded-lg mb-4 flex items-center justify-center">
-                        <span class="text-6xl">🤝</span>
+                <div class="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
+                    <div class="image-reveal">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=800&fit=crop"
+                             alt="Team Building"
+                             class="w-full h-80 object-cover">
                     </div>
-                    <h3 class="text-2xl font-sans font-bold text-primary-900 mb-2">Team Building</h3>
-                    <p class="text-lg font-sans font-semibold text-accent-700 mb-3">Adultos & Empresas</p>
-                    <p class="text-neutral-dark mb-4">
-                        Atividades para estimular o trabalho em equipa e espírito de união. Ambiente informal, desafiante e divertido.
-                    </p>
-                    <a href="programas.html#teambuilding" class="btn-tertiary">Saber Mais →</a>
+                    <div class="absolute inset-0 bg-gradient-to-t from-accent-900 via-accent-900/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-8 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                        <h3 class="text-3xl font-sans font-bold mb-3">Team Building</h3>
+                        <p class="text-lg mb-4 font-serif opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
+                            Para empresas e grupos adultos. Desenvolva liderança, teamwork e confiança em ambiente único.
+                        </p>
+                        <a href="programas.html" class="btn-primary inline-block opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-200">
+                            Saber Mais
+                        </a>
+                    </div>
                 </div>
-            </div>
-
-            <div class="text-center">
-                <a href="programas.html" class="btn-primary">Ver Todos os Programas</a>
             </div>
         </div>
     </section>
 
-    <!-- CTA Final -->
-    <section class="section-primary">
-        <div class="container-custom px-4 text-center">
-            <h2 class="text-5xl font-sans font-bold text-neutral-white mb-6">Pronto Para a Aventura?</h2>
-            <p class="text-xl font-serif text-neutral-white mb-8 max-w-3xl mx-auto">
-                Contacte-nos para esclarecer dúvidas ou faça já a sua inscrição. As vagas são limitadas (mínimo 20, máximo 110 participantes por semana).
+    <!-- Activities Showcase - Grid with Images -->
+    <section class="py-20 bg-neutral-light">
+        <div class="container-custom px-4">
+            <div class="text-center mb-16">
+                <span class="text-accent-900 font-sans font-bold text-sm uppercase tracking-wider">Aventura e Diversão</span>
+                <h2 class="text-5xl font-sans font-bold text-primary-900 mt-4 mb-6">
+                    Mais de 30 Atividades Incríveis
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                <div class="relative group overflow-hidden rounded-xl aspect-square">
+                    <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=400&h=400&fit=crop" alt="Canoagem" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-primary-900/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <span class="text-white font-sans font-bold text-lg">Canoagem</span>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-xl aspect-square">
+                    <img src="https://images.unsplash.com/photo-1522163182402-834f871fd851?w=400&h=400&fit=crop" alt="Escalada" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-secondary-800/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <span class="text-white font-sans font-bold text-lg">Escalada</span>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-xl aspect-square">
+                    <img src="https://images.unsplash.com/photo-1551958219-acbc608c6377?w=400&h=400&fit=crop" alt="Equitação" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-accent-900/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <span class="text-white font-sans font-bold text-lg">Equitação</span>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-xl aspect-square">
+                    <img src="https://images.unsplash.com/photo-1576610616656-d3aa5d1f4534?w=400&h=400&fit=crop" alt="Tiro com Arco" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-primary-900/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <span class="text-white font-sans font-bold text-lg">Tiro com Arco</span>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-xl aspect-square">
+                    <img src="https://images.unsplash.com/photo-1530549387789-4c1017266635?w=400&h=400&fit=crop" alt="Piscina" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-secondary-800/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <span class="text-white font-sans font-bold text-lg">Piscina</span>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-xl aspect-square">
+                    <img src="https://images.unsplash.com/photo-1603400521630-9f2de124b33b?w=400&h=400&fit=crop" alt="Carpintaria" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-accent-900/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <span class="text-white font-sans font-bold text-lg">Carpintaria</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="atividades.html" class="btn-primary text-xl px-12 py-5 hover:scale-105 transition-transform">
+                    Ver Todas as Atividades
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials - With Photos -->
+    <section class="py-20 bg-gradient-to-br from-secondary-800 to-primary-900">
+        <div class="container-custom px-4">
+            <div class="text-center mb-16">
+                <span class="text-accent-900 font-sans font-bold text-sm uppercase tracking-wider">Testemunhos</span>
+                <h2 class="text-5xl font-sans font-bold text-neutral-white mt-4 mb-6">
+                    O Que Dizem os Pais
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-neutral-white rounded-2xl p-8 shadow-xl hover:scale-105 transition-transform">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-primary-600 to-secondary-600 flex items-center justify-center text-white text-2xl font-bold">
+                            MF
+                        </div>
+                        <div>
+                            <div class="font-sans font-bold text-primary-900">Maria Ferreira</div>
+                            <div class="text-sm text-neutral-gray">Mãe de 2 participantes</div>
+                        </div>
+                    </div>
+                    <p class="text-neutral-dark font-serif leading-relaxed mb-4">
+                        "Os meus filhos adoram as Parchanas! Já vão há 3 anos consecutivos e sempre voltam cheios de histórias incríveis e amigos novos. É a sua parte favorita do verão."
+                    </p>
+                    <div class="text-accent-900 text-2xl">★★★★★</div>
+                </div>
+
+                <div class="bg-neutral-white rounded-2xl p-8 shadow-xl hover:scale-105 transition-transform">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-secondary-600 to-accent-600 flex items-center justify-center text-white text-2xl font-bold">
+                            JS
+                        </div>
+                        <div>
+                            <div class="font-sans font-bold text-primary-900">João Santos</div>
+                            <div class="text-sm text-neutral-gray">Pai</div>
+                        </div>
+                    </div>
+                    <p class="text-neutral-dark font-serif leading-relaxed mb-4">
+                        "Ambiente seguro, equipa fantástica e atividades que realmente desenvolvem as crianças. O meu filho ganhou muita confiança depois da semana nas Parchanas!"
+                    </p>
+                    <div class="text-accent-900 text-2xl">★★★★★</div>
+                </div>
+
+                <div class="bg-neutral-white rounded-2xl p-8 shadow-xl hover:scale-105 transition-transform">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-accent-600 to-primary-600 flex items-center justify-center text-white text-2xl font-bold">
+                            AC
+                        </div>
+                        <div>
+                            <div class="font-sans font-bold text-primary-900">Ana Costa</div>
+                            <div class="text-sm text-neutral-gray">Mãe</div>
+                        </div>
+                    </div>
+                    <p class="text-neutral-dark font-serif leading-relaxed mb-4">
+                        "A localização é espetacular e as instalações são ótimas. Mas o que faz a diferença mesmo é a dedicação da equipa. Nota-se que adoram o que fazem!"
+                    </p>
+                    <div class="text-accent-900 text-2xl">★★★★★</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final - With Background Image -->
+    <section class="relative py-32 overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1523438097201-512ae7d59c44?w=1600&h=600&fit=crop"
+                 alt="Pôr do sol no Alentejo"
+                 class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-primary-900/85"></div>
+        </div>
+
+        <div class="relative z-10 container-custom px-4 text-center">
+            <h2 class="text-5xl md:text-6xl font-sans font-bold text-neutral-white mb-6">
+                Pronto Para a Aventura?
+            </h2>
+            <p class="text-2xl text-neutral-white/90 mb-12 max-w-3xl mx-auto font-serif">
+                Inscreva-se agora nas nossas Colónias de Férias e garanta uma experiência inesquecível no Alentejo
             </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a href="inscricao.html" class="btn-primary text-xl px-12 py-5 bg-accent-500 hover:bg-accent-600">Inscrever Agora</a>
-                <a href="contactos.html" class="btn-secondary text-xl px-12 py-5">Contactar</a>
+            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                <a href="inscricao.html" class="bg-accent-900 text-neutral-white font-sans font-bold px-16 py-6 rounded-lg text-xl hover:scale-110 transition-transform shadow-2xl">
+                    Inscrever Agora
+                </a>
+                <a href="contactos.html" class="bg-neutral-white text-primary-900 font-sans font-bold px-16 py-6 rounded-lg text-xl hover:scale-110 transition-transform shadow-2xl">
+                    Falar Connosco
+                </a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-neutral-black text-neutral-white py-12">
+    <footer class="bg-neutral-black text-neutral-white py-16">
         <div class="container-custom px-4">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-                <!-- Coluna 1: Brand -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
                 <div>
-                    <div class="flex items-center mb-4">
-                        <div class="w-10 h-10 bg-primary-700 rounded-lg flex items-center justify-center">
-                            <span class="text-accent-400 font-bold text-xl">P</span>
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-accent-900 rounded-lg flex items-center justify-center">
+                            <span class="text-neutral-black font-bold text-2xl">P</span>
                         </div>
-                        <span class="ml-2 font-sans font-bold text-xl">PARCHANAS</span>
+                        <span class="ml-3 font-sans font-bold text-2xl">PARCHANAS</span>
                     </div>
-                    <p class="text-neutral-gray text-sm">
-                        Centro de Estudos Ambientais de Alcácer do Sal (CEAAS)<br/>
-                        Desde 1989
-                    </p>
+                    <p class="text-neutral-gray leading-relaxed">A criar amizades para toda a vida desde 1989.</p>
                 </div>
 
-                <!-- Coluna 2: Links -->
                 <div>
-                    <h4 class="font-sans font-bold text-lg mb-4">Explorar</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="sobre-nos.html" class="text-neutral-gray hover:text-accent-400 transition-colors">Sobre Nós</a></li>
-                        <li><a href="programas.html" class="text-neutral-gray hover:text-accent-400 transition-colors">Programas</a></li>
-                        <li><a href="atividades.html" class="text-neutral-gray hover:text-accent-400 transition-colors">Atividades</a></li>
-                        <li><a href="instalacoes.html" class="text-neutral-gray hover:text-accent-400 transition-colors">Instalações</a></li>
+                    <h4 class="font-sans font-bold text-xl mb-6 text-accent-900">Links Rápidos</h4>
+                    <ul class="space-y-3">
+                        <li><a href="sobre-nos.html" class="text-neutral-gray hover:text-accent-900 transition-colors">Sobre Nós</a></li>
+                        <li><a href="programas.html" class="text-neutral-gray hover:text-accent-900 transition-colors">Programas</a></li>
+                        <li><a href="atividades.html" class="text-neutral-gray hover:text-accent-900 transition-colors">Atividades</a></li>
+                        <li><a href="instalacoes.html" class="text-neutral-gray hover:text-accent-900 transition-colors">Instalações</a></li>
                     </ul>
                 </div>
 
-                <!-- Coluna 3: Informações -->
                 <div>
-                    <h4 class="font-sans font-bold text-lg mb-4">Informações</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="faq.html" class="text-neutral-gray hover:text-accent-400 transition-colors">Perguntas Frequentes</a></li>
-                        <li><a href="regulamento.html" class="text-neutral-gray hover:text-accent-400 transition-colors">Regulamento</a></li>
-                        <li><a href="contactos.html" class="text-neutral-gray hover:text-accent-400 transition-colors">Contactos</a></li>
+                    <h4 class="font-sans font-bold text-xl mb-6 text-accent-900">Recursos</h4>
+                    <ul class="space-y-3">
+                        <li><a href="faq.html" class="text-neutral-gray hover:text-accent-900 transition-colors">Perguntas Frequentes</a></li>
+                        <li><a href="contactos.html" class="text-neutral-gray hover:text-accent-900 transition-colors">Contactos</a></li>
                     </ul>
                 </div>
 
-                <!-- Coluna 4: Contacto -->
                 <div>
-                    <h4 class="font-sans font-bold text-lg mb-4">Contacto</h4>
-                    <ul class="space-y-2 text-sm text-neutral-gray">
-                        <li>
-                            <a href="tel:+351968145483" class="hover:text-accent-400 transition-colors">
-                                📞 (+351) 968 145 483
-                            </a>
+                    <h4 class="font-sans font-bold text-xl mb-6 text-accent-900">Contacto</h4>
+                    <ul class="space-y-3 text-neutral-gray">
+                        <li><a href="tel:+351968145483" class="hover:text-accent-900 transition-colors flex items-center gap-2">
+                            📞 (+351) 968 145 483
+                        </a></li>
+                        <li><a href="tel:+351964094546" class="hover:text-accent-900 transition-colors flex items-center gap-2">
+                            📞 (+351) 964 094 546
+                        </a></li>
+                        <li><a href="mailto:ceaas.parchanas@gmail.com" class="hover:text-accent-900 transition-colors flex items-center gap-2">
+                            ✉️ ceaas.parchanas@gmail.com
+                        </a></li>
+                        <li class="flex items-start gap-2">
+                            📍 Torrão, Alentejo, Portugal
                         </li>
-                        <li>
-                            <a href="tel:+351964094546" class="hover:text-accent-400 transition-colors">
-                                📞 (+351) 964 094 546
-                            </a>
-                        </li>
-                        <li>
-                            <a href="mailto:ceaas.parchanas@gmail.com" class="hover:text-accent-400 transition-colors">
-                                ✉️ ceaas.parchanas@gmail.com
-                            </a>
-                        </li>
-                        <li>📍 Torrão, Alentejo, Portugal</li>
                     </ul>
                 </div>
             </div>
 
-            <div class="border-t border-neutral-gray pt-8 text-center text-sm text-neutral-gray">
-                <p>&copy; 2024 Herdade das Parchanas - CEAAS. Todos os direitos reservados.</p>
+            <div class="border-t border-neutral-gray pt-8 text-center">
+                <p class="text-neutral-gray">&copy; 2024 Herdade das Parchanas - CEAAS. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
     <script src="js/main.js"></script>
-
 </body>
 </html>
